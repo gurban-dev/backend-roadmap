@@ -1,0 +1,8 @@
+/* Select all elements in an HTML document. */
+* {
+    font-weight: bold;
+}
+
+p {
+    font-style: italic;
+}

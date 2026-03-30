@@ -1,0 +1,24 @@
+DNS (Domain Name System) is the "Phonebook of the Internet."
+It translates human-readable domain names (like google.com)
+into machine-readable IP addresses (like 142.250.190.46),
+because computers communicate via IP addresses, not names.
+
+When you type a URL into your browser, the DNS journey begins:
+
+The goal of the DNS journey is to get an IP address so the browser
+can send an HTTP request to a server.
+
+1. The browser first checks its own cache, then the OS cache.
+   If the IP is there, the DNS resolution process ends.
+2. If the IP was not cached, the request is sent to the recursive
+   resolver. This is often managed by your ISP or a service like
+   Google Public DNA 8.8.8.8.
+3. If the resolver doesn't have the answer, it asks the Root Server.
+4. If the Root Server also doesn't recognise the IP address, the
+   .com TLD Nameserver.
+5. If none of the previous options were able to recognise the IP
+   address, the authoritative nameserver will hold the actual DNS
+   records for google.com. It returns the IP address to the resolver.
+6. The resolver returns the IP address to your browser. The IP is
+   then stored in the resolver's cache, the OS cache and the browser's
+   cache.

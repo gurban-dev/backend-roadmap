@@ -1,0 +1,22 @@
+Hosting is the process of renting space on a physical or
+virtual server to store a website's files, databases and
+assets. It makes these resources accessible to users over
+the internet by providing a public IP address and ensuring
+that the server is always running.
+
+Shared hosting:
+Multiple websites share the same server resources (CPU/RAM).
+
+VPS (Virtual Private Server):
+A single physical server partitioned into multiple virtual
+servers.
+
+Cloud Hosting:
+Rather than relying on a physical server, your site is hosted
+across a cluster of servers. The primary benefit is that if one
+node (a single physical server) fails, the site will still be
+up and running.
+
+Dedicated Server:
+The client rents the entire physical server. It offers maximum
+performance and security, but is more expensive.

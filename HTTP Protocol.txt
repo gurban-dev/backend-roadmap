@@ -1,5 +1,5 @@
 HTTP (HyperText Transfer Protocol) is the foundation for
-data communicate for the World Wide Web.
+data communication for the World Wide Web.
 
 It's the language that your browser (the client) and the
 server use to talkto each other.

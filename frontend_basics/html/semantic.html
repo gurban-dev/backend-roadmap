@@ -1,0 +1,83 @@
+<!-- HTML stands for HyperText markup language. -->
+
+<!-- In HTML, tags/elements are used to define the structure of a
+     a web page.
+     
+     There are certain tags/elements used to describe the meaning of
+     the content:
+     <header>, <nav>, <main>, <section>, <article>, <footer>
+    
+     Semantic elements are important for the following reasons:
+     1. Screen readers use these elements to navigate content.
+     2. SEO (Search engine optimisation): Search engines understand
+        your page structure more easily.
+     3. Your code is more readable and logical.
+
+     A screen reader is an assistive software application that converts
+     digital content into speech or braille for users who are visually
+     impaired. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Semantic HTML</title>
+
+    <!-- The invisble part of the HTML document is inside the <head> element.
+
+         The visibile part of the HTML document is inside the <body> element.
+
+         The <header> element represents a container for introductory
+         content.
+
+         ./ indicates that the program will begin looing from the
+         current directory.
+
+         .. indicates that the program needs to look one directory
+         level above. -->
+    <link rel="stylesheet" href="./../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Website</h1>
+
+        <p>Welcome to my semantic HTML page!</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Articles</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Latest Articles</h2>
+
+            <article>
+                <!-- h1 will be the largest size. -->
+                <h3>What is HTML?</h3>
+
+                <p>Semantic tags improve readability and SEO...</p>
+
+                <!-- The 'id' attribute is a unique name you give an element so
+                     that it can be identified and targeted by CSS or JavaScript. -->
+                <button id="readMoreBtn">Click me to see what happens</button>
+
+                <p id="output"></p>
+            </article>
+        </section>
+    </main>
+
+    <!-- It's best practice to link the JavaScript at the end of
+         the <body> element to ensure that all of the HTML elements
+         have fully loaded before the script runs.
+
+         Otherwise, the script (JavaScript program) could attempt to
+         access elements that don't exist yet.
+         
+         The 'defer' attribute provides another layer of safety for this. -->
+    
+    <script src="./../js/script.js" defer></script>
+</body>
+
+</html>

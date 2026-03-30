@@ -1,0 +1,10 @@
+What is a Domain Name?
+
+Think of a Domain Name as the human-readable address for a website.
+
+While computers communicate using IP addresses (string of nubers
+like '142.250.190.46'), those are difficult for humans to memorize.
+
+A domain name acts as an alias, an easy-to-remember alternative
+name that maps that specific IP address so users can easily find
+content on the internet.

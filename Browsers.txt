@@ -1,0 +1,41 @@
+Can you explain what happens when you type a URL into your browser
+and press Enter?
+
+1. The DNS Lookup
+   Browsers don't know where a website lives by its domain name
+   (e.g., google.com); they need an IP address.
+
+   If the IP address doesn't exist in the browser's cache, the
+   OS cache or the router's cache, the browser performs a DNS
+   lookup to find the IP address associated with the domain.
+
+2. Establish a Connection (TCP/TLS)
+   TCP Handshake: Once the IP is found, the browser initiates a
+   TCP connection with a server to ensure a reliable communication
+   channel.
+
+   TLS Negotiation: If the site is HTTPS, the browser and server
+   perform a TLS handshake to exchange certifications and agree
+   on encyrption keys to keep the data secure.
+
+3. The HTTP Request
+   Thw browser sends an HTTP request to the server. This includes
+   the request method (GET, POST, etc.), headers and sometimes a
+   request body.
+
+4. Server Processing
+   The server receives the HTTP request from the browser, processes
+   it (talks to a database, runs backend logic, etc.), and sends
+   back an HTTP response.
+
+   The response will contain a status code (e.g., 200 OK or 404 Not
+   Found) and the content (HTML, CSS and JavaScript).
+
+5. Rendering the Page
+   The browser engine parses the response from the server:
+   DOM Tree: The HTML is parsed into a Document Object Model.
+
+   CSSOM Tree: CSS is parsed into a CSS Object Model.
+
+   Render Tree: The browser combines the DOM and CSSOM to create a
+   "Render Tree."
