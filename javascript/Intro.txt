@@ -1,0 +1,21 @@
+
+JavaScript is a high-level, dynamically typed programming language
+used to create interactive and dynamic content on websites.
+
+Being high-level means it abstracts away low-level details like memory
+management and CPU instructions.
+
+JavaScript is often described as interpreted, but modern engines use
+Just-In-Time (JIT) compilation to convert code into optimized machine
+code at runtime.
+
+Although it started as a scripting language for browsers, JavaScript
+is now a general-purpose language used for both frontend and backend
+development, including server-side programming with Node.js.
+
+Install node and npm:
+
+Windows OS:
+https://nodejs.org/en/download
+
+Select the LTS version since this stands for (Long Term Support).
