@@ -34,6 +34,8 @@ let str = "Hello";
 let num = 42;
 let isTrue = false;
 
+// Objects (not primitive data types):
+
 // Demonstrate an array. Arrays are ordered collections of values.
 let arr = [1, 2, 3];
 
