@@ -1,4 +1,4 @@
-
+// Arrow function.
 const calculateScore = () => {
 	var score = 100;
 
@@ -9,16 +9,18 @@ const calculateScore = () => {
 	return score;
 };
 
-// What does it return now?
+// What does the calculateScore() function return now?
 
 // Rewrite it so it returns 100.
+
+console.log("calculateScore():", calculateScore());
 
 
 for (var i = 0; i < 3; i++) {
 	let message = `Index: ${i}`;
 }
 
-console.log(message);
+// console.log("\nmessage:", message);
 
 // What error occurs and why?
 
@@ -57,7 +59,7 @@ const testScope = () => {
 
 	setTimeout(() => {
 		console.log(a);
-		console.log(b);
+		// console.log(b);
 	}, 100);
 }
 

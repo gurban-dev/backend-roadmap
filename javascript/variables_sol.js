@@ -42,6 +42,11 @@ for (var i = 0; i < 3; i++) {
 
 
 // Fixed version by logging inside the loop.
+
+// With let a new binding is established on each iteration.
+
+// This binding is a connection between the variable 'i' and the
+// value being assigned to it.
 for (let i = 0; i < 3; i++) {
     let message = `Index: ${i}`;
 
@@ -69,6 +74,9 @@ let countSafe = 1;
 // SyntaxError
 // let countSafe = 2;
 
+// A variable declared with 'let' allows reassignment, but
+// not redeclaration (declaring a new variable with the same
+// name).
 countSafe = 2;
 
 // Outputs 2.
@@ -76,12 +84,14 @@ console.log(`countSafe: ${countSafe}`);
 
 
 // Exercise 4
-// This prints undefined three times because i becomes 3
+// This prints undefined three times because 'i' becomes 3
 // after the loop finishes and users[3] is undefined.
 const users = ["Alice", "Bob", "Charlie"];
 
 console.log('\nFor loop with var:');
 
+// The execution of the 97 was delayed by 100 milliseconds to
+// show why using 'var' can be unpredictable.
 for (var i = 0; i < users.length; i++) {
     setTimeout(() => {
         console.log(`users[${i}] (var): ${users[i]}`);
@@ -94,6 +104,8 @@ setTimeout(() => {
 
 // Fixed version using let to create a new binding per iteration.
 for (let i = 0; i < users.length; i++) {
+    // The exetuion of line 109 was delayed by 100 ms because it
+    // should not appear in the terminal before line 97.
     setTimeout(() => {
         console.log(`users[${i}] (let): ${users[i]}`);
     }, 100);
@@ -114,7 +126,7 @@ const testScope = () => {
         console.log(`\na: ${a}`);
 
         // ReferenceError
-        // console.log(`b: ${b}`);
+        console.log(`b: ${b}`);
     }, 100);
 };
 
