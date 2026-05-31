@@ -3,7 +3,7 @@ const animal = {
 
     // Create a method that prints a generic sound.
     makeSound() {
-        console.log('Some generic animal sound');
+        console.log('Some generic animal sound.');
     }
 };
 
@@ -52,12 +52,12 @@ console.log(
 );
 
 // Question 3 Answer:
-// Check whether animal is the prototype of dog.
+// -Check whether animal is the prototype of dog.
 console.log(
-    Object.getPrototypeOf(dog) === animal
+    `Object.getPrototypeOf(dog) === animal: ${Object.getPrototypeOf(dog) === animal}`
 );
 
-// Check whether bark is an own property of dog.
+// -Check whether dog has its own property named 'bark'.
 console.log(
     dog.hasOwnProperty('bark')
 );
@@ -81,7 +81,7 @@ Expected Output:
 Woof!
 Some generic animal sound
 The animal object is printed.
-true
+-true
 true
 false
 */
