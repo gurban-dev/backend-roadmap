@@ -26,6 +26,9 @@ dog.bark = () => {
 // Call the bark method stored directly on dog.
 dog.bark();
 
+// Included for adding an empty line to the output.
+console.log();
+
 // Call the inherited makeSound method.
 
 // JavaScript first searches dog for makeSound().
@@ -48,18 +51,26 @@ found directly on the object itself.
 // Question 2 Answer:
 // This prints the prototype object that dog inherits from.
 console.log(
-    Object.getPrototypeOf(dog)
+    `\nObject.getPrototypeOf(dog): ${
+        Object.getPrototypeOf(dog)
+    }`
 );
 
 // Question 3 Answer:
-// -Check whether animal is the prototype of dog.
+// Object.getPrototypeOf() checks whether animal is the prototype
+// of dog.
 console.log(
-    `Object.getPrototypeOf(dog) === animal: ${Object.getPrototypeOf(dog) === animal}`
+    `\nObject.getPrototypeOf(dog) === animal: ${
+        Object.getPrototypeOf(dog) === animal
+    }`
 );
 
-// -Check whether dog has its own property named 'bark'.
+// Check whether 'bark' is an own property of dog rather than
+// a property inherited through the prototype chain.
 console.log(
-    dog.hasOwnProperty('bark')
+    `\ndog.hasOwnProperty('bark'): ${
+        dog.hasOwnProperty('bark')
+    }`
 );
 
 // Check whether makeSound is an own property of dog.
@@ -67,7 +78,9 @@ console.log(
 // This returns false because makeSound is inherited
 // from animal rather than stored directly on dog.
 console.log(
-    dog.hasOwnProperty('makeSound')
+    `\ndog.hasOwnProperty('makeSound'): ${
+        dog.hasOwnProperty('makeSound')
+    }`
 );
 
 // Question 4 Answer:
@@ -77,11 +90,15 @@ console.log(
 
 /*
 Expected Output:
-
 Woof!
-Some generic animal sound
-The animal object is printed.
--true
-true
-false
+
+Some generic animal sound.
+
+Object.getPrototypeOf(dog): [object Object]
+
+Object.getPrototypeOf(dog) === animal: true
+
+dog.hasOwnProperty('bark'): true
+
+dog.hasOwnProperty('makeSound'): false
 */

@@ -1,120 +1,193 @@
+// =========================================================
+// INTRODUCTION TO JAVASCRIPT PROMISES
+// =========================================================
+
 // A Promise is an object that represents a value that will
-// be available later on in the program.
+// be available later on throughout a program.
 
 // A Promise is a placeholder for a future result.
 
-// Instead of immediately giving you a result, a Promise says
-// I don't have the result yet, but will eventually give you
-// a success value or an error.
+// Instead of immediately giving you a result, a Promise says:
+// "I don't have the result yet, but I will eventually provide
+// either a success value or an error."
 
-// Keep in mind that a Promise does not require a delay.
-// It's simply an object that represents the eventual result of
-// an operation. Sometimes that result is availably immediately,
-// and sometimes it arrives later.
+// A Promise does not require a delay.
 
-// Why do Promises exist?
+// It simply represents the eventual outcome of an operation.
+// Sometimes the result is available immediately.
+// Sometimes it arrives later.
+
+// =========================================================
+// WHY PROMISES EXIST
+// =========================================================
+
 // Many operations take time:
-// Downloading data from a server.
-// Waiting for user input.
-// Accessing a database.
+// • Downloading data from a server.
+// • Reading a file.
+// • Accessing a database.
+// • Waiting for user input.
 
-// Promises make it possible to run other code while waiting
-// for another operation.
+// JavaScript does not want to stop the entire program while
+// waiting for these operations to finish.
+
+// Promises allow JavaScript to continue running other code
+// while waiting for the result.
 
 // When the operation finishes, the Promise is updated with
-// the result.
+// either a success value or an error.
+
+// =========================================================
+// PROMISE STATES
+// =========================================================
 
 // A Promise can be in one of three states:
-// 1. Pending - the work is still occurring.
-// 2. Fulfilled - the operation succeeded.
-// 3. Rejected - the operation failed.
+// 1. Pending
+//    The operation is still in progress.
+// 2. Fulfilled
+//    The operation succeeded.
+// 3. Rejected
+//    The operation failed.
 
-// A Promise constructor receives a function.
-// That function receives two arguments.
+// Once a Promise becomes fulfilled or rejected, its state
+// cannot change again.
 
-// In this case, the arrow function receives resolve and
-// reject as two arguments.
+// =========================================================
+// CREATING A PROMISE
+// =========================================================
 
-// new Promise indicates that this is a built-in JavaScript class.
+// Promise is a built-in JavaScript class.
 
-// The constructor callback is included because the Promise expects
-// a function:
-// (resolve, reject) => {}
+// The Promise constructor expects one argument:
 
-// The Promise constructor calls the function and supplies those
-// arguments.
+// new Promise(executorFunction)
 
-// The Promise constructor expects one argument and that argument
-// must be a function.
-
-// The executor function's responsibility is to perform some work
-// and evnetually tell the Promise whether it succeeded or failed.
-
-// The Promise constructor executes the executor function.
-
-// When you write:
-// new Promise((resolve, reject) => {
-// 
-// });
-
-// A function is being passed to the Promise constructor.
-
-// The Promise constructor provides the two functions and passes
-// them into the executor function.
-
-// The executor function:
-// (resolve, reject) => {
-//     ...
-// }
+// The executor function is responsible for performing some
+// work and eventually reporting success or failure.
 
 const promise = new Promise((resolve, reject) => {
+
+    // The Promise constructor provides these two functions:
+    // resolve()
+    // reject()
+
+    // The executor uses them to report the outcome of the
+    // operation.
+
     const success = true;
 
-    // The setTimeout simulates a delay of 3 seconds.
+    // Simulate an operation that takes 3 seconds.
     setTimeout(() => {
 
-        // resolve and reject are provided automatically by
-        // JavaScript.
-
         if (success) {
+            // Fulfill the Promise.
             resolve('Loaded successfully.');
         } else {
-            reject('Loading failed.')
+            // Reject the Promise.
+            reject('Loading failed.');
         }
+
     }, 3000);
 });
 
-console.log("Before call to arrow function.");
+// =========================================================
+// CONSUMING A PROMISE
+// =========================================================
+
+// .then() runs when the Promise is fulfilled.
+
+// The parameter receives the value that was passed to
+// resolve().
 
 promise
     .then((message) => {
         console.log(message);
     })
+
+    // .catch() runs when the Promise is rejected.
+
+    // The parameter receives the value that was passed to
+    // reject().
+
     .catch((error) => {
         console.log(error);
     });
 
-console.log("After call to arrow function.");
+// =========================================================
+// EXECUTION ORDER
+// =========================================================
 
-// Promise.resolve(5) creates a Promise that is already fulfilled
-// with the value 5.
+console.log('Before Promise settles.');
 
-// The first .then() receives that value of 5.
-// 5 * 2 -> 10
+// The Promise is still waiting for setTimeout().
 
-// The second .then() in the Promise chain receives the result
-// from the previous .then().
+console.log('After Promise settles.');
 
-// 10 + 1 -> 11
+// The output will be:
+// Before Promise settles.
+// After Promise settles.
+// Loaded successfully.
 
-// The last .then() receives 11.
+// because JavaScript continues running other code while
+// waiting for the Promise to settle.
+
+// =========================================================
+// PROMISE CHAINING
+// =========================================================
+
+// Promise.resolve(5) creates a Promise that is already
+// fulfilled with the value 5.
+
 Promise.resolve(5)
+
+    // Receives 5.
     .then((number) => {
         return number * 2;
     })
+
+    // Receives 10.
     .then((number) => {
         return number + 1;
     })
+
+    // Receives 11.
     .then((number) => {
         console.log(number);
     });
+
+// Flow:
+
+// Promise.resolve(5)
+//         ↓
+//         5
+//         ↓
+//       5 * 2
+//         ↓
+//        10
+//         ↓
+//      10 + 1
+//         ↓
+//        11
+//         ↓
+//   console.log(11)
+
+// =========================================================
+// MENTAL MODEL
+// =========================================================
+
+// Create Promise
+//       ↓
+// Executor runs immediately
+//       ↓
+// Start some work
+//       ↓
+// resolve(value) OR reject(error)
+//       ↓
+// Promise settles
+//       ↓
+// .then() OR .catch()
+
+// The Promise constructor creates the Promise object and
+// provides resolve() and reject().
+
+// The executor function performs the work and uses
+// resolve() or reject() to report the outcome.

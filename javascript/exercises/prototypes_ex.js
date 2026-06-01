@@ -27,12 +27,11 @@ Instructions
    dog.makeSound()
 
 7. Observe that:
-   - bark() is an own method of dog
-   - makeSound() is inherited through the prototype chain
+   • bark() is an own method of dog
+   • makeSound() is inherited through the prototype chain
 
 
 Questions
-
 1. Why can dog access makeSound() even though the method was
    not defined directly on dog?
 
