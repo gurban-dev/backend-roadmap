@@ -17,7 +17,7 @@
 // Rewrite the solution using .then() instead of await.
 // Which version do you find easier to read?
 
-function fetchOrders() {
+const fetchOrders = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve([
@@ -27,7 +27,7 @@ function fetchOrders() {
       ]);
     }, 1000);
   });
-}
+};
 
 // TODO:
 // Make this function async.
