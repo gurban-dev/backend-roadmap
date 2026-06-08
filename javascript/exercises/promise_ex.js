@@ -18,6 +18,8 @@
 // PART 1:
 // Complete the loadPlayer() function.
 
+// 'loadPlayer' is simply a variable that references the arrow function
+// which is anonymous (it has no name).
 const loadPlayer = () => {
 
     return new Promise((resolve, reject) => {

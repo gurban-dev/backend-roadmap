@@ -76,6 +76,10 @@ const promise = new Promise((resolve, reject) => {
     const success = true;
 
     // Simulate an operation that takes 3 seconds.
+
+    // setTimeout() schedules a macrotask.
+
+    // Without setTime(), this would simply be synchronous code.
     setTimeout(() => {
 
         if (success) {
@@ -99,17 +103,20 @@ const promise = new Promise((resolve, reject) => {
 // resolve().
 
 promise
+    // .then() runs only when the Promise has been resolved.
+
+    // The parameter named message, is assigned the argument that
+    // was passed to resolve().
     .then((message) => {
-        console.log(message);
+        console.log(`message: ${message}`);
     })
 
-    // .catch() runs when the Promise is rejected.
+    // .catch() runs only when the Promise has been rejected.
 
-    // The parameter receives the value that was passed to
-    // reject().
-
+    // The parameter named error, is assigned the argument that
+    // was passed to reject().
     .catch((error) => {
-        console.log(error);
+        console.log(`error: ${error}`);
     });
 
 // =========================================================
@@ -137,6 +144,11 @@ console.log('After Promise settles.');
 // Promise.resolve(5) creates a Promise that is already
 // fulfilled with the value 5.
 
+// JavaScript always empties the microtask queue first befoe emptying
+// the macrotask queue first which s why 'number: 11' is logged to the
+// console before 'message: Loaded successfully.'.
+
+// Promise.resolve.then() schedules a microtask.
 Promise.resolve(5)
 
     // Receives 5.
@@ -151,7 +163,7 @@ Promise.resolve(5)
 
     // Receives 11.
     .then((number) => {
-        console.log(number);
+        console.log(`number: ${number}`);
     });
 
 // Flow:

@@ -22,6 +22,8 @@
 // Complete the loadPlayer() function.
 // =========================================================
 
+// 'loadPlayer' is simply a variable that references the arrow function
+// which is anonymous (it has no name).
 const loadPlayer = () => {
 
     return new Promise((resolve, reject) => {
@@ -38,7 +40,7 @@ const loadPlayer = () => {
             } else {
                 // Invoking reject() in the callback function causes
                 // the .catch() block to execute.
-                reject('Player failed to load');
+                reject('Player failed to load!');
             }
         }, 2000);
     });
