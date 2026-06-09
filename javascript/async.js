@@ -39,9 +39,9 @@ Asynchronous programming can change the order.
 
 console.log('A');
 
-// Even if the delay is set to 0, this is still a microtask.
+// Even if the delay is set to 0, this is still a macrotask.
 // JavaScript will first run synchronous code before it empties
-// the microtask queue.
+// the macrotask queue.
 setTimeout(() => {
     console.log('B');
 }, 0);
@@ -56,7 +56,7 @@ setTimeout(() => {
 }, 0);
 
 // 'num' is undefined because the line of sychronous code
-// below was executed before JavaScript emptied the microtask
+// below was executed before JavaScript emptied the macrotask
 // queue and assigned 10 to 'num'.
 
 // The asynchronous code did not finish yet.

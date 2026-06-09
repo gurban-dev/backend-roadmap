@@ -144,7 +144,7 @@ console.log('After Promise settles.');
 // Promise.resolve(5) creates a Promise that is already
 // fulfilled with the value 5.
 
-// JavaScript always empties the microtask queue first befoe emptying
+// JavaScript always empties the microtask queue first before emptying
 // the macrotask queue first which s why 'number: 11' is logged to the
 // console before 'message: Loaded successfully.'.
 
