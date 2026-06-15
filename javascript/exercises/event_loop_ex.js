@@ -87,7 +87,6 @@ displayMessage();
 
 
 // Expected output:
-
 // Learning JavaScript
 
 // Part 5: Event Loop Challenge

@@ -1,5 +1,5 @@
 // =========================================================
-// INTRODUCTION TO JAVASCRIPT PROMISES
+// Introduction to JavaScript Promises
 // =========================================================
 
 // A Promise is an object that represents a value that will
@@ -18,7 +18,7 @@
 // Sometimes it arrives later.
 
 // =========================================================
-// WHY PROMISES EXIST
+// Why Promises Exist
 // =========================================================
 
 // Many operations take time:
@@ -37,7 +37,7 @@
 // either a success value or an error.
 
 // =========================================================
-// PROMISE STATES
+// Promise States
 // =========================================================
 
 // A Promise can be in one of three states:
@@ -52,7 +52,7 @@
 // cannot change again.
 
 // =========================================================
-// CREATING A PROMISE
+// Creating a Promise
 // =========================================================
 
 // Promise is a built-in JavaScript class.
@@ -94,7 +94,7 @@ const promise = new Promise((resolve, reject) => {
 });
 
 // =========================================================
-// CONSUMING A PROMISE
+// Consuming a Promise
 // =========================================================
 
 // .then() runs when the Promise is fulfilled.
@@ -120,7 +120,7 @@ promise
     });
 
 // =========================================================
-// EXECUTION ORDER
+// Execution Order
 // =========================================================
 
 console.log('Before Promise settles.');
@@ -138,7 +138,7 @@ console.log('After Promise settles.');
 // waiting for the Promise to settle.
 
 // =========================================================
-// PROMISE CHAINING
+// Promise Chaining
 // =========================================================
 
 // Promise.resolve(5) creates a Promise that is already
@@ -166,7 +166,7 @@ Promise.resolve(5)
         console.log(`number: ${number}`);
     });
 
-// Flow:
+// Visual Flow:
 
 // Promise.resolve(5)
 //         ↓
@@ -183,7 +183,7 @@ Promise.resolve(5)
 //   console.log(11)
 
 // =========================================================
-// MENTAL MODEL
+// Mental Model
 // =========================================================
 
 // Create Promise

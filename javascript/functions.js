@@ -2,11 +2,16 @@
 A function is a reusable block of code designed to perform a
 specific task.
 
-Functions allow programmers to organize logic into named units
+Functions allow programmers to organise logic into named units
 that can be reused multiple times throughout a program.
 
 Similar to a recipe, you define the instructions once, give the
 recipe a name, then reuse it whenever needed.
+
+Remember that in a JavaScript program:
+• Two different functions cannot have the same name.
+• camelCase is the standard naming convention for JavaScript
+  function names.
 */
 
 
@@ -36,6 +41,12 @@ This is an arrow function expression assigned to the variable
 
 The variable name becomes the reference used to invoke the
 function.
+
+Arrow functions are declared with const keyword because it
+prevents the function variable from being accidentally
+reassigned:
+
+greetArrow = "Not a function anymore.";
 */
 const greetArrow = () => {
     console.log('\nHello.');
