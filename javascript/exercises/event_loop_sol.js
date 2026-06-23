@@ -26,29 +26,31 @@ Answers:
 
 console.log("A");
 
+// Macro task
 setTimeout(function () {
-  console.log("B");
+	console.log("B");
 }, 0);
 
+// Micro task
 Promise.resolve().then(() => {
-  console.log("C");
+	console.log("C");
 });
 
 console.log("D");
 
 
-/*
-Part 2: Add a catch().
+// Part 2: Add a .catch().
 
-Handle the rejected Promise and print the error.
-*/
+// Handle the rejected Promise and print the error.
 
+// Micro task
 function getNumber() {
-  return Promise.reject("Something went wrong");
+	return Promise.reject("Something went wrong");
 }
 
+// Handle the rejected Promise.
 getNumber().catch(function (error) {
-  console.log(error);
+	console.error(error);
 });
 
 
@@ -60,16 +62,16 @@ that resolves with "Hello, World!".
 */
 
 function getGreeting() {
-  return new Promise(function (resolve) {
-    resolve("Hello, World!");
-  });
+	return new Promise(function (resolve) {
+		resolve("Hello, World!");
+	});
 }
 
-/*
-Print the resolved value using then().
-*/
+// Micro task
+
+// Print the resolved value using .then().
 getGreeting().then(function (message) {
-  console.log(message);
+	console.log(message);
 });
 
 
@@ -80,23 +82,19 @@ Await the Promise and print the message.
 */
 
 const getMessage = () => {
-  return Promise.resolve("Learning JavaScript");
+	return Promise.resolve("Learning JavaScript");
 };
 
 async function displayMessage() {
-  /*
-  Wait for the Promise to resolve.
-  */
-  const message = await getMessage();
+	// Micro task
 
-  /*
-  Print the resolved value.
-  */
-  console.log(message);
+	// Wait for the Promise to resolve.
+	const message = await getMessage();
+
+	console.log(message);
 }
 
 displayMessage();
-
 
 /*
 Part 5: Event Loop Challenge
@@ -124,16 +122,18 @@ Answers:
 
 console.log("Start");
 
+// Macro task
 setTimeout(() => {
-  console.log("Timer");
+	console.log("Timer");
 }, 0);
 
+// Micro tasks
 Promise.resolve().then(function () {
-  console.log("Promise 1");
+	console.log("Promise 1");
 });
 
 Promise.resolve().then(() => {
-  console.log("Promise 2");
+	console.log("Promise 2");
 });
 
 console.log("End");
@@ -147,72 +147,17 @@ inside a try/catch block.
 */
 
 async function loadUser() {
-  try {
-    /*
-    Create a Promise that resolves successfully.
-    */
-    const result = await Promise.resolve("User Loaded");
+	try {
+		// Micro task
 
-    /*
-    Print the resolved value.
-    */
-    console.log(result);
-  } catch (error) {
-    console.log(error);
-  }
+		// Create a Promise that resolves successfully.
+		const result = await Promise.resolve("User Loaded");
+
+		// Print the resolved value.
+		console.log(result);
+	} catch (error) {
+		console.error(error);
+	}
 }
 
 loadUser();
-
-
-/*
-Bonus Challenge
-
-Answers:
-
-1. Output:
-   1
-   5
-   2
-   3
-   4
-
-2. Values from synchronous code:
-   1
-   5
-
-3. Values from microtasks:
-   2
-   3
-
-4. Value from a macrotask:
-   4
-
-Explanation:
-
-- "1" runs immediately.
-- The first then() callback is queued as a microtask.
-- setTimeout() callback is queued as a macrotask.
-- "5" runs immediately.
-- Microtasks run before macrotasks:
-  -> "2" prints.
-  -> The second then() is queued and executed.
-  -> "3" prints.
-- Finally the timer callback runs and prints "4".
-*/
-
-console.log("1");
-
-Promise.resolve()
-  .then(() => {
-    console.log("2");
-  })
-  .then(() => {
-    console.log("3");
-  });
-
-setTimeout(function () {
-  console.log("4");
-}, 0);
-
-console.log("5");

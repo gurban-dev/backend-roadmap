@@ -1,25 +1,37 @@
-// Part 1 Solution.
+// Part 1 Solution
+
+const fetchOrders = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve([
+                "Bike Helmet",
+                "Water Bottle",
+                "Bike Lock"
+            ]);
+        }, 1000);
+    });
+};
 
 // Mark the function as async so that await can be used inside it.
-async function getCustomerOrders() {
+async function getCustomerOrdersAwait() {
 
-    // Wait for the promise returned by fetchOrders() to resolve.
+    try {
+        // Pause execution of this async function until the promise resolves.
 
-    // Once the promise resolves, the array is assigned to orders.
-    const orders = await fetchOrders();
+        // Once the promise resolves, the array is assigned to orders.
+        const orders = await fetchOrders();
 
-    // Print a label to the console.
-    console.log("Orders:");
-
-    // Print the actual array.
-    console.log(orders);
+        console.log(`Orders:\n${orders.join("\n")}`);
+    } catch (error) {
+        console.error(error);
+    }
 }
 
-getCustomerOrders();
+getCustomerOrdersAwait();
 
 
-// Part 2 Solution.
-//
+// Part 2 Solution
+
 // This version uses .then() instead of await.
 function getCustomerOrdersThen() {
 
@@ -29,11 +41,8 @@ function getCustomerOrdersThen() {
     // resolves.
     fetchOrders().then((orders) => {
 
-    // The resolved array is passed into the orders parameter.
-    console.log("Orders:");
-
-    // Print the array.
-    console.log(orders);
+        // The resolved array is passed into the orders parameter.
+        console.log(`\nOrders: ${orders.join(" ")}`);
     });
 }
 
@@ -43,7 +52,7 @@ getCustomerOrdersThen();
 // Comparison:
 
 // In both solutions, orders contains the same array.
-//
+
 // await:
 // const orders = await fetchOrders();
 
@@ -53,3 +62,8 @@ getCustomerOrdersThen();
 // The difference is that await assigns the resolved value
 // directly to a variable, while .then() passes the resolved
 // value into a callback function.
+
+// async/await is often preferred because it allows asynchronous
+// code to be written in a top-to-bottom style, avoiding long chains
+// of .then() calls, and lets errors from multiple asynchronous
+// operations be handled in a single try/catch block.

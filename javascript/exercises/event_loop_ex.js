@@ -1,27 +1,32 @@
 // JavaScript Event Loop and Promises Exercise
 
 // Practice:
-// then()
-// catch()
-// Microtasks
-// Macrotasks
+// Synchronous code (console.log())
+// Micro tasks (Promise.then(), Promise.catch(), async/await)
+// Macro tasks (setTimeout())
 // async
 // await
-// Arrow functions
-// Traditional functions
+
+// Order of execution:
+// 1. Synchronous code
+// 2. Micro tasks
+// 3. Macro tasks
 
 // Part 1: Predict the Output
 
 // Without running the code, write down the exact order of the output.
 
+// Synchronous code
 console.log("A");
 
+// Macro task
 setTimeout(function () {
-  console.log("B");
+	console.log("B");
 }, 0);
 
+// Micro task
 Promise.resolve().then(() => {
-  console.log("C");
+	console.log("C");
 });
 
 console.log("D");
@@ -29,15 +34,15 @@ console.log("D");
 // Questions
 // 1. What is the output?
 // 2. Which lines are synchronous?
-// 3. Which callback is a microtask?
-// 4. Which callback is a macrotask?
+// 3. Which callback is a micro task?
+// 4. Which callback is a macro task?
 
 // Part 2: Add a catch()
 
 // Complete the missing code so that the error is handled.
 
 function getNumber() {
-  return Promise.reject("Something went wrong");
+	return Promise.reject("Something went wrong");
 }
 
 getNumber()
@@ -59,7 +64,7 @@ getNumber()
 // Starter code:
 
 function getGreeting() {
-  // Your code here.
+	// Your code here.
 }
 
 // Then use then() to print the result.
@@ -74,13 +79,13 @@ function getGreeting() {
 // Complete the code below.
 
 const getMessage = () => {
-  return Promise.resolve("Learning JavaScript");
+	return Promise.resolve("Learning JavaScript");
 };
 
 async function displayMessage() {
-  // Use await here.
+	// Use await here.
 
-  // Print the message.
+	// Print the message.
 }
 
 displayMessage();
@@ -93,19 +98,21 @@ displayMessage();
 
 // Without running the code, predict the output.
 
-javascript
 console.log("Start");
 
+// Macro task
 setTimeout(() => {
-  console.log("Timer");
+	console.log("Timer");
 }, 0);
 
+// Micro task
 Promise.resolve().then(function () {
-  console.log("Promise 1");
+	console.log("Promise 1");
 });
 
+// Micro task
 Promise.resolve().then(() => {
-  console.log("Promise 2");
+	console.log("Promise 2");
 });
 
 console.log("End");
@@ -122,7 +129,6 @@ console.log("End");
 // Create an async function named loadUser.
 
 // Requirements:
-
 // 1. Create a Promise that resolves with "User Loaded".
 // 2. Use await inside loadUser.
 // 3. Print the result.
@@ -132,42 +138,13 @@ console.log("End");
 
 async function loadUser() {
     try {
-    // Your code here.
+    	// Your code here.
     } catch (error) {
-    console.log(error);
+    	console.log(error);
     }
 }
 
 loadUser();
 
 // Expected output:
-
-
 // User Loaded
-
-
-// Predict the output before running it.
-
-
-console.log("1");
-
-Promise.resolve()
-  .then(() => {
-    console.log("2");
-  })
-  .then(() => {
-    console.log("3");
-  });
-
-setTimeout(function () {
-  console.log("4");
-}, 0);
-
-console.log("5");
-
-// Questions:
-
-// 1. What is the output?
-// 2. Which values come from synchronous code?
-// 3. Which values come from microtasks?
-// 4. Which value comes from a macrotask?

@@ -15,8 +15,8 @@ const userPromise = new Promise((resolve, reject) => {
     }
 });
 
-// Handle the fulfilled state of the Promise.
 userPromise
+    // Handle the fulfilled state of the Promise.
     .then((message) => {
 
         // Display the success message.

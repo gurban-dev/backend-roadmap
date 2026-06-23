@@ -18,15 +18,15 @@
 // Which version do you find easier to read?
 
 const fetchOrders = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve([
-        "Bike Helmet",
-        "Water Bottle",
-        "Bike Lock"
-      ]);
-    }, 1000);
-  });
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve([
+              "Bike Helmet",
+              "Water Bottle",
+              "Bike Lock"
+            ]);
+        }, 1000);
+    });
 };
 
 // TODO:
