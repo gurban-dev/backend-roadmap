@@ -37,6 +37,7 @@ console.log("D");
 // 3. Which callback is a micro task?
 // 4. Which callback is a macro task?
 
+
 // Part 2: Add a catch()
 
 // Complete the missing code so that the error is handled.
@@ -51,6 +52,7 @@ getNumber()
 
 // The console should display:
 // Something went wrong
+
 
 // Part 3: Create a Promise
 
@@ -90,41 +92,11 @@ async function displayMessage() {
 
 displayMessage();
 
-
 // Expected output:
 // Learning JavaScript
 
-// Part 5: Event Loop Challenge
 
-// Without running the code, predict the output.
-
-console.log("Start");
-
-// Macro task
-setTimeout(() => {
-	console.log("Timer");
-}, 0);
-
-// Micro task
-Promise.resolve().then(function () {
-	console.log("Promise 1");
-});
-
-// Micro task
-Promise.resolve().then(() => {
-	console.log("Promise 2");
-});
-
-console.log("End");
-
-// Questions
-
-// 1. What is the output?
-// 2. Why does "Timer" not run before the Promise callbacks?
-// 3. Which items enter the microtask queue?
-// 4. Which item enters the macrotask queue?
-
-// Part 6: Build an async Function
+// Part 5: Build an async Function
 
 // Create an async function named loadUser.
 

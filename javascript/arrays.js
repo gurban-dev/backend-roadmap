@@ -1,7 +1,7 @@
 // Array composed of items with distinct data types.
 const student_info = ["Alice", 10, true];
 
-// Display the entire array with a whitespace character as
+// Display the entire array with a space character as
 // the separator.
 console.log(`student_info: ${student_info.join(" ")}`);
 
@@ -17,11 +17,12 @@ console.log(`\nstudent_info[0]: ${student_info[0]}`);
 // is built directly into the core JavaScript language.
 // console.log(`\nstudent_info[-1]: ${student_info[-1]}`);
 
-// The .at() method was introduced and it natively supports
-// negative integers.
+// The .at() method was introduced to allow indexing from
+// either end of an array. It natively supports negative
+// indices.
 console.log(`\nstudent_info.at(-1): ${student_info.at(-1)}`);
 
-const fruits = ["orange", "madarin", "apple"];
+const fruits = ["orange", "mandarin", "apple"];
 
 // Add an item to the end of the array.
 fruits.push("fig");
@@ -32,8 +33,8 @@ console.log(`\nfruits: ${fruits.join(" ")}`)
 fruits.pop()
 
 // Insert an element at a particular index.
-// The element at that index gets pushed to the right
-// just as the ones that follow it.
+// The element currently at that index and all following
+// elements are shifted one position to the right.
 
 // Syntax:
 // .splice(index_to_insert_at, no_of_items_to_remove, item_to_insert);
@@ -70,5 +71,9 @@ console.log(`\nfruits: ${fruits.join(" ")}`)
 
 // Remove the item at the beginning.
 fruits.shift();
+
+// Since there isn't an item being added to the array,
+// the first and second arguments are provided.
+// fruits.splice(0, 1);
 
 console.log(`\nfruits: ${fruits.join(" ")}`)

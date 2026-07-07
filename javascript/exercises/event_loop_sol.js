@@ -96,51 +96,9 @@ async function displayMessage() {
 
 displayMessage();
 
-/*
-Part 5: Event Loop Challenge
-
-Answers:
-
-1. Output:
-   Start
-   End
-   Promise 1
-   Promise 2
-   Timer
-
-2. "Timer" does not run first because Promise callbacks
-   are microtasks, and the event loop processes all
-   microtasks before moving to the macrotask queue.
-
-3. Microtasks:
-   Promise 1 callback
-   Promise 2 callback
-
-4. Macrotask:
-   Timer callback
-*/
-
-console.log("Start");
-
-// Macro task
-setTimeout(() => {
-	console.log("Timer");
-}, 0);
-
-// Micro tasks
-Promise.resolve().then(function () {
-	console.log("Promise 1");
-});
-
-Promise.resolve().then(() => {
-	console.log("Promise 2");
-});
-
-console.log("End");
-
 
 /*
-Part 6: Build an async Function.
+Part 5: Build an async Function.
 
 Create a Promise, await it, and print the result
 inside a try/catch block.
