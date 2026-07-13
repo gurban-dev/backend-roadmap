@@ -1,12 +1,12 @@
 // Array composed of items with distinct data types.
-const student_info = ["Alice", 10, true];
+const studentInfo = ["Alice", 10, true];
 
 // Display the entire array with a space character as
 // the separator.
-console.log(`student_info: ${student_info.join(" ")}`);
+console.log(`studentInfo: ${studentInfo.join(" ")}`);
 
 // Display the first element in the array.
-console.log(`\nstudent_info[0]: ${student_info[0]}`);
+console.log(`\nstudentInfo[0]: ${studentInfo[0]}`);
 
 // Display the last element in the array.
 
@@ -15,16 +15,19 @@ console.log(`\nstudent_info[0]: ${student_info[0]}`);
 
 // In this context, the word "native" means that a feature
 // is built directly into the core JavaScript language.
-// console.log(`\nstudent_info[-1]: ${student_info[-1]}`);
+// console.log(`\nstudentInfo[-1]: ${studentInfo[-1]}`);
 
 // The .at() method was introduced to allow indexing from
 // either end of an array. It natively supports negative
 // indices.
-console.log(`\nstudent_info.at(-1): ${student_info.at(-1)}`);
+console.log(`\nstudentInfo.at(-1): ${studentInfo.at(-1)}`);
 
 const fruits = ["orange", "mandarin", "apple"];
 
 // Add an item to the end of the array.
+
+// The .push() method will return the updated number of
+// items in the array.
 fruits.push("fig");
 
 console.log(`\nfruits: ${fruits.join(" ")}`)
@@ -37,7 +40,15 @@ fruits.pop()
 // elements are shifted one position to the right.
 
 // Syntax:
-// .splice(index_to_insert_at, no_of_items_to_remove, item_to_insert);
+// .splice(start, deleteCount, item1, item2, ..., itemN);
+
+// -start
+
+// -deleteCount
+
+// Insert an element at the beginning of an array without
+// removing any existing items:
+fruits.splice(0, 0, "watermelon");
 
 // The .splice() method cannot accept keyword arguments; it only
 // accepts positional arguments.
@@ -60,20 +71,35 @@ console.log(`\nfruits: ${fruits.join(" ")}`)
 
 const removed_fruits = fruits.splice(0, 2, "avocado");
 
+// In this case, 0 would be assigned to the start index
+// which represents where the item will be inserted.
+
+// "avocado" would be assigned to the deleteCount parameter
+// which means that a string would be coerced to a Number.
+const removed_fruits = fruits.splice(0, "avocado");
+
 console.log(`\nremoved_fruits: ${removed_fruits.join(" ")}`)
 
 console.log(`\nfruits: ${fruits.join(" ")}`)
 
 // Add an item to the beginning.
+
+// The .unshift() method returns the updated number of
+// items in the array.
 fruits.unshift("apricot");
 
 console.log(`\nfruits: ${fruits.join(" ")}`)
 
 // Remove the item at the beginning.
+
+// The .shift() method will return the item that was
+// removed.
 fruits.shift();
 
 // Since there isn't an item being added to the array,
-// the first and second arguments are provided.
+// only the first and second arguments are provided.
+
+// This simply removes one item starting from index 0.
 // fruits.splice(0, 1);
 
 console.log(`\nfruits: ${fruits.join(" ")}`)

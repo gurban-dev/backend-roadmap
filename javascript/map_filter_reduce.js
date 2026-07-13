@@ -1,9 +1,9 @@
 const numbers = [2, 4, 6, 8, 10];
 
-// map() is a built-in array method.
+// .map() is a built-in array method.
 
 // It creates a new array by applying a function to every
-// element.
+// element inside the original array.
 const doubledNumbers = numbers.map((number) => {
     return number * 2;
 });
