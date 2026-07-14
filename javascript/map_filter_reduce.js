@@ -2,8 +2,8 @@ const numbers = [2, 4, 6, 8, 10];
 
 // .map() is a built-in array method.
 
-// It creates a new array by applying a function to every
-// element inside the original array.
+// It creates a new array by calling a function on every
+// element in the original array.
 const doubledNumbers = numbers.map((number) => {
     return number * 2;
 });
@@ -13,13 +13,13 @@ console.log("numbers:", numbers, "\n");
 
 console.log("doubledNumbers:", doubledNumbers, "\n");
 
-const cityNames = ["ottowa", "washington, D.C."];
+const cityNames = ["ottawa", "washington, D.C."];
 
 // uppercasedCityNames is the name of the variable that references
 // the new array that the .map() method will return.
 const uppercasedCityNames = cityNames.map((cityName) => {
-    // Invoking one method immediately after another with dot notation,
-    // is known are method chaining.
+    // Calling a method on the value returned by another method
+    // is known as method chaining.
 
     // .slice(1) extracts the characters beginning at index 1
     // through the end of the string.
@@ -47,12 +47,12 @@ const users = [
 // the parentheses.
 
 // Rule 2:
-// If the body of the arrow function only contains one line
-// of code, you can remove the curly braces.
+// If the arrow function only needs to produce one result,
+// you can remove the curly braces.
 
 // Rule 3:
 // When you omit the curly braces, JavaScript automatically
-// returns the value of the expression.
+// returns that result.
 const userNames = users.map(user => user.name);
 
 // const userNames = users.map(user => user["name"]);

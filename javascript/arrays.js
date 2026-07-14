@@ -1,4 +1,4 @@
-// Array composed of items with distinct data types.
+// Array composed of items with different data types.
 const studentInfo = ["Alice", 10, true];
 
 // Display the entire array with a space character as
@@ -33,6 +33,9 @@ fruits.push("fig");
 console.log(`\nfruits: ${fruits.join(" ")}`)
 
 // Remove the item at the end of the array.
+
+// The .pop() method will return the item that was removed at
+// the end of the array.
 fruits.pop()
 
 // Insert an element at a particular index.
@@ -42,43 +45,67 @@ fruits.pop()
 // Syntax:
 // .splice(start, deleteCount, item1, item2, ..., itemN);
 
-// -start
+// start
+// Specifies the index where splice() begins modifying the array.
+// The element at this index is the first element that can be removed.
+// A negative value counts backward from the end of the array.
 
-// -deleteCount
+// deleteCount
+// Specifies how many elements should be removed starting at start.
+// A value of 0 means that no elements are removed.
+// If omitted, all elements from start to the end are removed.
+
+// item1, item2, ..., itemN
+// Specifies the new elements to insert into the array at start.
+// These parameters are optional and can contain any JavaScript value.
+// If no items are provided, splice() only removes elements.
 
 // Insert an element at the beginning of an array without
 // removing any existing items:
+
+// The .splice() method always returns an array containing the
+// removed items. If no items are removed, it returns an empty
+// array.
 fruits.splice(0, 0, "watermelon");
 
-// The .splice() method cannot accept keyword arguments; it only
-// accepts positional arguments.
+// The .splice() method does not support keyword arguments.
+// JavaScript passes these arguments by position.
 
-// Positional arguments (no parameters included):
-// order_coffee("Medium", "Oat Milk", true);
+// Positional arguments:
+// orderCoffee("Medium", "Oat Milk", true);
 
-// Keyword arguments (parameter names included):
-// order_coffee(size="Medium", milk="Oat Milk", is_iced=true);
+// Python-style keyword arguments are not supported in JavaScript.
+// orderCoffee(size="Medium", milk="Oat Milk", isIced=true);
 
-// The parameter names are: size, milk and is_iced
+// The parameter names are size, milk, and isIced.
 
 fruits.splice(1, 0, "clementine");
 
 console.log(`\nfruits: ${fruits.join(" ")}`)
 
-// If an integer greater than zero is passed as an argument for
-// the no_of_items_to_remove parameter, an array containing the
-// items that were removed will be returned.
+// If an integer greater than zero is passed as the deleteCount
+// argument, splice() returns an array containing the removed
+// items.
 
-const removed_fruits = fruits.splice(0, 2, "avocado");
+// 0 is assigned to the start parameter.
+// 2 is assigned to the deleteCount parameter.
+// "avocado" is assigned to the first item parameter.
+let removedFruits = fruits.splice(0, 2, "avocado");
 
-// In this case, 0 would be assigned to the start index
-// which represents where the item will be inserted.
+console.log(`\nremovedFruits: ${removedFruits.join(" ")}`);
 
-// "avocado" would be assigned to the deleteCount parameter
-// which means that a string would be coerced to a Number.
-const removed_fruits = fruits.splice(0, "avocado");
+// In this case, 0 is assigned to the start parameter,
+// which specifies where splice() begins modifying the array.
 
-console.log(`\nremoved_fruits: ${removed_fruits.join(" ")}`)
+// "avocado" is assigned to the deleteCount parameter.
+// JavaScript attempts to convert the string to a number.
+
+// Since "avocado" cannot be converted to a valid number,
+// the conversion produces NaN. For deleteCount, NaN is
+// treated as 0, so no items are removed.
+removedFruits = fruits.splice(0, "avocado");
+
+console.log(`\nremovedFruits: ${removedFruits.join(" ")}`);
 
 console.log(`\nfruits: ${fruits.join(" ")}`)
 

@@ -1,10 +1,10 @@
 /*
-A school stores information about their students.
+A school stores information about its students.
 
 Each student is represented as a JavaScript object.
 
 The program should create a new array that contains
-only students' names.
+only the students' first names.
 */
 
 const students = [
@@ -25,6 +25,7 @@ const students = [
 // Use .map() to create a new array that contains
 // only each student's first name.
 
-// Display the original array using .join(" ").
+// Display the contents of each object in the original array
+// using .forEach().
 
 // Display the new array using .join(" ").

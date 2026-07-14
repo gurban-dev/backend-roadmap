@@ -12,18 +12,23 @@ const user = {
     2: "two"
 };
 
-// -An object is made up of properties and values that they
-// correspond to.
+// An object is made up of properties, and each property has a
+// corresponding value.
 
-// This is known as JSON which stands for JavaScript Object
-// notation.
+// This is a JavaScript object.
 
-// JSON rules to abide by:
+// JavaScript Object Notation, or JSON, is a text-based data
+// format commonly used to store and exchange data.
+
+// JSON.stringify() converts a JavaScript value into a JSON
+// string.
+
+// JSON syntax rules:
 // 1. All strings must be written with double quotation marks.
 // 2. Functions cannot be stored inside JSON.
 // 3. The last item in an object cannot have a comma after it.
 // 4. The allowed data types are: strings, numbers, booleans,
-//    arrays, object and null.
+//    arrays, objects and null.
 
 // JSON.stringify(
 //     value,
@@ -31,9 +36,9 @@ const user = {
 //     space
 // )
 
-// value: The object to convert to JSON.
-// replacer: Optionally customizes the output.
-// space: Controls the indentation of the output.
+// value: The JavaScript value to convert to a JSON string.
+// replacer: Optionally customises which values are included.
+// space: Controls the indentation of the JSON string.
 console.log(`user: ${JSON.stringify(user, null, 4)}\n`);
 
 // Access the name property using dot notation.
@@ -58,3 +63,10 @@ console.log('user.address.city:', user.address.city, '\n');
 
 // Access the nested city property using bracket notation.
 console.log("user[\"address\"][\"city\"]:", user["address"]["city"], '\n');
+
+// Access the numeric property using bracket notation.
+// You cannot write user.2 because that produces a syntax error.
+
+// Numeric property keys like the number 2 are converted to strings
+// when the object is converted to JSON.
+console.log("user[2]:", user[2]);
