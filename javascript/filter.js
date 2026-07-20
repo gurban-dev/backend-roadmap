@@ -1,17 +1,30 @@
+// filter() does not modify the original array.
+// Instead, it creates and returns a new array.
+
+
 // Array
 const prices = [20, 35, 40, 75, 100];
 
 // Create a new array that only keeps prices that are at least 50.
 const expensivePrices = prices.filter((price) => {
-    // On each iteration, filter() passes a different element of
-    // the array as an argument to the parameter 'price'.
+    // filter() visits every element in the array one by one.
+    
+    // Each element is passed as an argument to the callback
+    // function and assigned to the parameter 'price'.
 
-    // For the first item that the .filter() method accesses, 20
-    // is assigned to the 'price' parameter of this arrow function.
+    // During the first iteration, the value 20 is assigned to
+    // the parameter 'price'.
 
-    // For items in the array that will cause the expression to
-    // return True, they will be included in the new array.
+    // The comparison produces either true or false.
+
+    // If the expression evaluates to true, the current price
+    // is copied into the new array.
+
+    // If it evaluates to false, the current element is not
+    // included in the new array.
     return price >= 50;
 });
 
-console.log(`expensivePrices: ${expensivePrices.join(", ")}\n`);
+console.log(`prices: ${prices.join(", ")}\n`);
+
+console.log(`expensivePrices: ${expensivePrices.join(", ")}`);

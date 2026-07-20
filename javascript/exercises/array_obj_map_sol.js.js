@@ -31,6 +31,9 @@ const students = [
 // During each call, student references the current
 // student object.
 
+// .map() does not change the original array.
+// Instead, it creates and returns a brand new array.
+
 // The firstName property is accessed from the current
 // student object and returned.
 
