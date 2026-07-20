@@ -47,7 +47,7 @@ students.forEach((student) => {
 });
 
 // Display the new array using .join(" ").
-console.log("studentNames:", studentNames.join(" "));
+console.log("studentNames:", studentNames.join(", "));
 
 // Use a concise arrow function to create another array
 // that contains only each student's first name.
@@ -64,9 +64,5 @@ const conciseStudentNames = students.map(
     student => student.firstName
 );
 
-// Display the array created with the concise arrow
-// function.
-console.log(
-    "\nconciseStudentNames:",
-    conciseStudentNames.join(" ")
-);
+// Display the array created with the concise arrow function.
+console.log("\nconciseStudentNames:", conciseStudentNames.join(", "));

@@ -1,0 +1,50 @@
+// Goal:
+// Practice using filter() and reduce() together.
+
+// Imagine you work for an online store.
+// Management wants to know the total revenue generated from
+// orders that are at least $100.
+
+// First, use filter() to keep only the qualifying orders.
+// Then, use reduce() to calculate the total revenue from
+// those qualifying orders.
+
+const orders = [
+    {
+        orderId: 101,
+        customer: "Alice",
+        total: 250
+    },
+    {
+        orderId: 102,
+        customer: "Bob",
+        total: 45
+    },
+    {
+        orderId: 103,
+        customer: "Charlie",
+        total: 180
+    },
+    {
+        orderId: 104,
+        customer: "David",
+        total: 95
+    },
+    {
+        orderId: 105,
+        customer: "Rose",
+        total: 320
+    }
+];
+
+// Create a new array containing only orders
+// whose total is at least $100.
+
+
+// Calculate the total revenue from the qualifying orders.
+
+
+// Display the qualifying orders.
+
+
+// Display the total revenue.
