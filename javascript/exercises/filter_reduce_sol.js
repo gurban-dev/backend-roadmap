@@ -3,7 +3,7 @@
 
 // Imagine you work for an online store.
 // Management wants to know the total revenue generated from
-// orders that are at least $100.
+// orders that are at least $100, but less than $200.
 
 // First, use filter() to keep only the qualifying orders.
 // Then, use reduce() to calculate the total revenue from
@@ -38,7 +38,7 @@ const orders = [
 ];
 
 // filter() creates a new array containing only the orders
-// whose total is at least $100 but less than $200.
+// whose total is at least $100, but less than $200.
 const qualifyingOrders = orders.filter((order) => {
     return order.total >= 100 && order.total < 200;
 });

@@ -58,17 +58,26 @@ console.log(`age: ${age}\n`);
 
 // Extract the value of the 'grade' property and store it in
 // a variable named 'letterGrade'.
+
+// In this case, 'grade' would not be accessible in the main
+// program.
 const { grade: letterGrade } = student;
 
 console.log(`letterGrade: ${letterGrade}`);
 
 const apiResponse = null;
 
-// || {} acts a safety mechanism called a logical fallback.
-// This guarantees that even if your data is null or undefined,
-// your code will still have a valid object to interact with.
+// || is the logical OR operator.
 
-// || is the OR operator.
-// The logical OR operator evaluates expressions from left to
-// right. It checks the first value is truthy.
+// It evaluates the value on the left first.
+// If that value is truthy, it uses that value.
+// If that value is falsy, it uses the value on the right.
+
+// {} is an empty object.
+
+// Therefore, || {} gives us an empty object when
+// the value on the left is null or undefined.
+
+// This prevents an error when we try to destructure
+// properties from a null or undefined value.
 const { response } = apiResponse || {};

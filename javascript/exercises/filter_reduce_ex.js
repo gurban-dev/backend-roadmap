@@ -3,7 +3,7 @@
 
 // Imagine you work for an online store.
 // Management wants to know the total revenue generated from
-// orders that are at least $100.
+// orders that are at least $100, but less than $200.
 
 // First, use filter() to keep only the qualifying orders.
 // Then, use reduce() to calculate the total revenue from
@@ -37,8 +37,8 @@ const orders = [
     }
 ];
 
-// Create a new array containing only orders
-// whose total is at least $100.
+// Create a new array containing only orders whose total is
+// at least $100, but less than $200.
 
 
 // Calculate the total revenue from the qualifying orders.
