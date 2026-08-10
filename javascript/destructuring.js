@@ -15,7 +15,16 @@ const colors = ["red", "green", "blue"];
 const firstColor = colors[0];
 const secondColor = colors[1];
 
-// JavaScript provides a shorter way for accessing items in an array.
+// With destructuring, JavaScript provides a shorter way for
+// accessing items in an array.
+
+// Unpacking the items begins from the beginning of the array.
+// Meaning that the first variable written inside of the square
+// brackets will be assigned the first item in the array.
+
+// The ordering of variables matters when destructuring elements.
+// If these two variables were to switch places, they would be
+// assigned different colors.
 const [firstColour, secondColour] = colors;
 
 console.log(`firstColour: ${firstColour}\n`);
@@ -31,12 +40,18 @@ const student = {
 // With object destructuring, JavaScript matches properties by
 // their names, not by their position.
 
+// Variables must match the property names because object unpack
+// data by exact name matches.
+
 // Without destructuring:
 const studentName = student.name;
 const studentAge = student.age;
 
 // With destructuring:
-const { name, age } = student;
+
+// When destructuring a a plain object, the order does not
+// make a difference.
+const { age, name } = student;
 
 console.log(`name: ${name}\n`);
 console.log(`age: ${age}\n`);
@@ -46,3 +61,14 @@ console.log(`age: ${age}\n`);
 const { grade: letterGrade } = student;
 
 console.log(`letterGrade: ${letterGrade}`);
+
+const apiResponse = null;
+
+// || {} acts a safety mechanism called a logical fallback.
+// This guarantees that even if your data is null or undefined,
+// your code will still have a valid object to interact with.
+
+// || is the OR operator.
+// The logical OR operator evaluates expressions from left to
+// right. It checks the first value is truthy.
+const { response } = apiResponse || {};
