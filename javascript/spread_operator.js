@@ -9,8 +9,9 @@ const arr1 = [1, 2];
 // numbers in arr1.
 
 // ... is the spread operator and it precedes the name
-// of the variable that references the array whose items
-// should be copied into the new array.
-const arr2 = [arr1, 3, 4];
+// of the variable that references the array whose elements
+// should be spread into the new array.
+const arr2 = [...arr1, 3, 4];
 
+console.log("arr1:", arr1);
 console.log("arr2:", arr2);
