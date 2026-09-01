@@ -11,6 +11,10 @@ const employee = {
 
 // Use object destructuring to extract the 'firstName' and
 // 'lastName' properties into new variables.
+
+// -The property names can be renamed and then the new names
+// can be used to reference the same values that the original
+// property names were referencing.
 const {
     // propertyName: newVariableName
     firstName: employeeFirstName,
@@ -34,6 +38,7 @@ const apiResponse = null;
 // that returns its right-hand side when its left-hand side
 // is either null or undefined. Otherwise, it returns its
 // left-hand side value.
+// -
 const {
     firstName: apiFirstName,
     salary: apiSalary
@@ -50,10 +55,17 @@ console.log(`apiSalary: ${apiSalary}`);
 // as Object.keys(), Object.values(), and Object.entries().
 const employeeValuesArr = Object.values(employee);
 
-console.log("employeeValuesArr:", employeeValuesArr);
+console.log("\nemployeeValuesArr:", employeeValuesArr);
 
 // Use array destructuring to extract the first two values.
 const [givenName, surname] = employeeValuesArr;
 
-console.log(`\ngivenName: ${givenName}`);
-console.log(`surname: ${surname}`);
+console.log(`\ngivenName: ${givenName}\nsurname: ${surname}`);
+
+// What if only the third item needs to be extracted?
+// const [, , salary] = employeeValuesArr;
+
+// What if only the first and third items need to be extracted?
+const [firstName, , salary] = employeeValuesArr;
+
+console.log(`\nfirstName: ${firstName}, salary: ${salary}`)
