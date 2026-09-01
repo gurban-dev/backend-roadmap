@@ -12,9 +12,9 @@ const employee = {
 // Use object destructuring to extract the 'firstName' and
 // 'lastName' properties into new variables.
 
-// -The property names can be renamed and then the new names
-// can be used to reference the same values that the original
-// property names were referencing.
+// propertyName: newVariableName
+// Create a variable with a new name and assign it the value from
+// the specified property.
 const {
     // propertyName: newVariableName
     firstName: employeeFirstName,
@@ -38,21 +38,22 @@ const apiResponse = null;
 // that returns its right-hand side when its left-hand side
 // is either null or undefined. Otherwise, it returns its
 // left-hand side value.
-// -
 const {
-    firstName: apiFirstName,
-    salary: apiSalary
+    firstName: firstNameFromResponse,
+    lastName: lastNameFromResponse,
+    salary: salaryFromResponse
 } = apiResponse ?? {};
 
-console.log(`\napiFirstName: ${apiFirstName}`);
-console.log(`apiSalary: ${apiSalary}`);
+console.log(`\nfirstNameFromResponse: ${firstNameFromResponse}`);
+console.log(`salaryFromResponse: ${salaryFromResponse}`);
+console.log(`lastNameFromResponse: ${lastNameFromResponse}`);
 
 // Object.values() will convert the employee plain object's
 // property values into an array.
 
-// Object is a built-in JavaScript function that can be used
-// to create objects and provides useful static methods such
-// as Object.keys(), Object.values(), and Object.entries().
+// Object is a built-in JavaScript function that provides useful
+// methods for working with objects, such as Object.keys() and
+// Object.values().
 const employeeValuesArr = Object.values(employee);
 
 console.log("\nemployeeValuesArr:", employeeValuesArr);

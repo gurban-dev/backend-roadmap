@@ -1,17 +1,75 @@
 // Learning goal:
 // Understand that the spread operator can take the elements
 // of an array and place those elements into another array.
-
 const arr1 = [1, 2];
 
 // Create a new array containing all of the numbers from
 // arr1 plus 3 and 4 without manually writing all of the
-// numbers in arr1.
+// numbers that were in arr1.
 
-// ... is the spread operator and it precedes the name
-// of the variable that references the array whose elements
+// ... is the spread operator and it precedes the name of
+// the variable that references the array whose elements
 // should be spread into the new array.
 const arr2 = [...arr1, 3, 4];
 
 console.log("arr1:", arr1);
-console.log("arr2:", arr2);
+console.log("arr2:", arr2, "\n");
+
+const user = {
+    name: "Alice",
+    age: 25,
+    address: {
+        city: "Toronto"
+    }
+};
+
+// Shallow copy
+// The spread operator creates a new object called clonedUser.
+
+// It copies the properties that are directly inside user: name, age,
+// and address.
+
+// clonedUser is a different object from user.
+
+// The values of name and age are copied into clonedUser.
+
+// However, the value stored in address is another object.
+
+// The spread operator does not create a new copy of that inner object.
+
+// Therefore, user.address and clonedUser.address refer to the same
+// object containing the city property.
+
+const clonedUser = {...user};
+
+console.log("user:", user);
+console.log("clonedUser:", clonedUser);
+
+clonedUser.age = 26;
+
+console.log("\nuser.age:", user.age);
+console.log("clonedUser.age:", clonedUser.age);
+
+// user.address and clonedUser.address both refer to the same object
+// that contains the city property.
+
+clonedUser.address.city = "Vancouver";
+
+console.log("\nuser.address.city:", user.address.city);
+console.log("clonedUser.address.city:", clonedUser.address.city);
+
+// Deep copy:
+// structuredClone() creates a new copy of the nested objects.
+
+// Unlike the shallow copy, structuredClone() creates a completely
+// separate copy of user and the object stored in its address property.
+
+// Therefore, user and deepCopy do not share the same object stored
+// in their address properties.
+const deepCopy = structuredClone(user);
+
+// Changing the city in deepCopy does not change the city in user.
+deepCopy.address.city = "Montreal";
+
+console.log("\nuser:", user);
+console.log("deepCopy:", deepCopy);
