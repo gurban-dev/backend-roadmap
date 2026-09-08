@@ -7,8 +7,9 @@
 // a result for false
 
 // Syntax:
-// condition ? result_if_true : result_if_false;
+// condition ? resultIfTrue : resultIfFalse;
 
+// Undefined
 let category;
 
 let age = 18;

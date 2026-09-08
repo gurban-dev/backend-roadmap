@@ -9,54 +9,70 @@ const arr1 = [1, 2];
 
 // ... is the spread operator and it precedes the name of
 // the variable that references the array whose elements
-// should be spread into the new array.
+// should be spread into the new array. The spread cannot
+// cannot be placed after the name of the variable.
 const arr2 = [...arr1, 3, 4];
 
+const arr3 = [0, ...arr1, 3, 4];
+
 console.log("arr1:", arr1);
-console.log("arr2:", arr2, "\n");
+console.log("arr2:", arr2);
+console.log("arr3:", arr3, "\n");
 
 const user = {
     name: "Alice",
     age: 25,
+
+    // address refers to a nested object.
+    // The object is nested because it's a plain object
+    // inside of another plain object.
     address: {
         city: "Toronto"
     }
 };
 
 // Shallow copy
-// The spread operator creates a new object called clonedUser.
+// The spread operator creates a new object called shallowCopiedUser.
 
 // It copies the properties that are directly inside user: name, age,
 // and address.
 
-// clonedUser is a different object from user.
+// Top-level contents refer to the properties or items that are
+// directly inside plain objects or arrays.
 
-// The values of name and age are copied into clonedUser.
+// shallowCopiedUser is a different object from user.
+
+// The values of name and age are copied into shallowCopiedUser.
 
 // However, the value stored in address is another object.
 
 // The spread operator does not create a new copy of that inner object.
 
-// Therefore, user.address and clonedUser.address refer to the same
+// Therefore, user.address and shallowCopiedUser.address refer to the same
 // object containing the city property.
 
-const clonedUser = {...user};
+const shallowCopiedUser = {...user};
 
+// A shallow copy it requires less time and memory for the computer
+// since the nested objects are not independent of the original.
+// With a shallow copy, the nested object is reused.
 console.log("user:", user);
-console.log("clonedUser:", clonedUser);
+console.log("shallowCopiedUser:", shallowCopiedUser);
 
-clonedUser.age = 26;
+shallowCopiedUser.age = 26;
 
+// Changing the Number that the 'age' property in shallowCopiedUser
+// is assigned, does not change the Number assigned to the
+// 'age' property for the 'user' plain object.
 console.log("\nuser.age:", user.age);
-console.log("clonedUser.age:", clonedUser.age);
+console.log("shallowCopiedUser.age:", shallowCopiedUser.age);
 
-// user.address and clonedUser.address both refer to the same object
+// user.address and shallowCopiedUser.address both refer to the same object
 // that contains the city property.
-
-clonedUser.address.city = "Vancouver";
+shallowCopiedUser.address.city = "Vancouver";
 
 console.log("\nuser.address.city:", user.address.city);
-console.log("clonedUser.address.city:", clonedUser.address.city);
+console.log("shallowCopiedUser.address.city:", shallowCopiedUser.address.city);
 
 // Deep copy:
 // structuredClone() creates a new copy of the nested objects.
@@ -66,6 +82,9 @@ console.log("clonedUser.address.city:", clonedUser.address.city);
 
 // Therefore, user and deepCopy do not share the same object stored
 // in their address properties.
+
+// A deep copy requires more time and memory since the nested objects
+// are not shared between the original and the copy.
 const deepCopy = structuredClone(user);
 
 // Changing the city in deepCopy does not change the city in user.

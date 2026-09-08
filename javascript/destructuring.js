@@ -51,9 +51,9 @@ const studentAge = student.age;
 
 // When destructuring a a plain object, the order does not
 // make a difference.
-const { age, name } = student;
+const { name, age } = student;
 
-console.log(`name: ${name}\n`);
+console.log(`name: ${name}`);
 console.log(`age: ${age}\n`);
 
 // Extract the value of the 'grade' property and store it in
@@ -80,4 +80,14 @@ const apiResponse = null;
 
 // This prevents an error when we try to destructure
 // properties from a null or undefined value.
-const { response } = apiResponse || {};
+
+// In JavaScript, an empty plain object is considered truthy. 
+let response = apiResponse || {};
+
+console.log("response:", response);
+
+// If both the left and right sides are falsy, the value
+// on the right side is assigned to the variable.
+response = apiResponse || undefined;
+
+console.log("\nresponse:", response);
