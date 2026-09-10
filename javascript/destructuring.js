@@ -31,7 +31,7 @@ console.log(`firstColour: ${firstColour}\n`);
 console.log(`secondColour: ${secondColour}\n`);
 
 // Plain object
-const student = {
+const student1 = {
     name: "Alice",
     age: 20,
     grade: "A"
@@ -44,26 +44,33 @@ const student = {
 // data by exact name matches.
 
 // Without destructuring:
-const studentName = student.name;
-const studentAge = student.age;
+const studentName = student1.name;
+const studentAge = student1.age;
 
 // With destructuring:
 
 // When destructuring a a plain object, the order does not
 // make a difference.
-const { name, age } = student;
+const { name, age } = student1;
 
 console.log(`name: ${name}`);
 console.log(`age: ${age}\n`);
 
+const student2 = {
+    name: "John",
+    age: 25,
+    grade: "B"
+};
+
 // Extract the value of the 'grade' property and store it in
-// a variable named 'letterGrade'.
+// a variable named 'student1Grade' to avoid confusion with
+// the grade for student2.
 
 // In this case, 'grade' would not be accessible in the main
 // program.
-const { grade: letterGrade } = student;
+const { grade: student1Grade } = student1;
 
-console.log(`letterGrade: ${letterGrade}`);
+console.log(`student1Grade: ${student1Grade}`);
 
 const apiResponse = null;
 

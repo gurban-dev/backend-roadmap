@@ -1,7 +1,9 @@
 // JavaScript or ECMAScript, introduced the const keyword in 2015.
 
 // The const declaration declares block-scoped local variables.
-// A variable declared with const cannot be reassigned.
+
+// Block-scoped means the variable can only be accessed within the
+// block of code where it was declared.
 
 // Variables declared with const:
 // • cannot be redeclared
@@ -15,7 +17,9 @@ const number = 42;
 // const number = 42;
 
 // A const variable must be initialised when it is declared.
+
 // An uninitialised variable declared with const generates a SyntaxError.
+
 // This SyntaxError occurs while the program is being parsed,
 // so a try...catch block in the same program cannot catch it.
 // const number;

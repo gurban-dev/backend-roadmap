@@ -1,20 +1,27 @@
 // Concepts:
 // Spread Operator, Shallow Copy, and Deep Copy.
-// Part 1: Array Spread.
+
+// Part 1: 
+// You are given the following array:
+// arr = [10, 20];
+
+// Part 2: Array Spread.
 // Create a new array called updatedNumbers that contains:
 // 10, 20, 30, 40.
+
 // You must use the spread operator.
 // Do not manually write 10 and 20.
 
 // Create another array called moreNumbers that contains:
 // 0, 10, 20, 30, 40.
+
 // You must use the spread operator.
 
 // Print all three arrays.
-// The output should allow you to compare the original
-// array with the two new arrays.
+// The output should allow you to compare the original array
+// with the two new arrays.
 
-// Part 2: Shallow Copy.
+// Part 3: Shallow Copy.
 // Create a plain object called user with:
 // name: "Alice"
 // age: 25
@@ -28,24 +35,21 @@
 // Print user.age and shallowCopy.age.
 // Does changing the age in shallowCopy change user.age?
 
-// Change the city property inside shallowCopy.address
-// to "Vancouver".
+// Change the city property inside shallowCopy.address to "Vancouver".
 
 // Print user.address.city and shallowCopy.address.city.
-// Does changing the city in shallowCopy also change// the city in user?
 
-// Part 3: Deep Copy.
+// Does changing the city in shallowCopy also change the city in user?
+
+// Part 4: Deep Copy.
 // Create a deep copy of user called deepCopy.
 // Use structuredClone().
 
-// Change the city property inside deepCopy.address
-// to "Montreal".
+// Change the city property inside deepCopy.address to "Montreal".
 
 // Print user.address.city and deepCopy.address.city.
-// Does changing the city in deepCopy also change// the city in user?
+// Does changing the city in deepCopy also change the city in user?
 
-/*
-Why does changing shallowCopy.address.city also change
-user.address.city, while changing deepCopy.address.city
-does not change user.address.city?
-*/
+// Part 5: Shallow vs. Deep Copy
+// Why does changing shallowCopy.address.city also change user.address.city,
+// while changing deepCopy.address.city does not change user.address.city?
