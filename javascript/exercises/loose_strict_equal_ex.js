@@ -7,16 +7,16 @@
 // Then run the code to check your answer.
 
 // What does == compare?
-console.log(5 == "5");
+console.log("5 == \"5\":", 5 == "5");
 
-console.log(5 == "5.0");
+console.log("5 == \"5.0\":", 5 == "5.0");
 
 // What does === compare?
-console.log(5 === "5");
+console.log("5 === \"5\":", 5 === "5");
 
-console.log(true == 1);
+console.log("true == 1:", true == 1);
 
-console.log(true === 1);
+console.log("true === 1:", true === 1);
 
 // Answer these questions:
 // 1. What does == compare?

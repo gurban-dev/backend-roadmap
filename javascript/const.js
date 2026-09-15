@@ -1,38 +1,45 @@
-// JavaScript or ECMAScript, introduced the const keyword in 2015.
+// JavaScript, or ECMAScript, introduced the const keyword in 2015.
 
-// A declaration is the introduction of a variable, constant or
+// A declaration is the introduction of a variable, constant, or
 // function.
 
-// Block-scoped means the variable can only be accessed within the
-// block of code where it was declared.
-
-// A block of code or code block always begins with an opening curly
+// A block of code, or code block, always begins with an opening curly
 // brace { and ends with a closing curly brace }.
-// Anything written between these curly braces, belongs to that block.
+
+// Anything written between these curly braces belongs to that block.
+//
 // {
 //     // This is the start of the block.
-
+//
 //     let message = "Hello";
-
+//
 //     // This is the end of the block.
 // }
 
+// Block-scoped means a variable can only be accessed within the
+// block of code where it was declared.
+
 // Variables declared with const:
-// • cannot be redeclared
-// • cannot be reassigned
-// • must be initialised
-// • have block scope
+// • cannot be redeclared in the same scope.
+// • cannot be reassigned.
+// • must be initialised when they are declared.
+// • have block scope.
+
+// A const variable is declared and initialised in the same statement.
 
 const number = 42;
 
 // Redeclaration in the same scope is not allowed.
 
-// The following is considered redeclaration of the variable
-// 'number' because the const keyword preceded.
+// The following is considered redeclaration because the const keyword
+// is being used to declare another variable with the same name.
 // const number = 42;
 
-// Reassignment is not allowed:
-// number = 42;
+// Reassignment is not allowed.
+
+// The variable 'number' already exists and has the value 42.
+// Trying to give it another value is called reassignment.
+// number = 50;
 
 // A const variable must be initialised when it is declared.
 
@@ -43,8 +50,10 @@ const number = 42;
 // const number;
 
 // An array in JavaScript falls under the category of an object.
-// If a variable declared with const refers to an object, the contents
-// of that object can still be mutated.
+
+// If a const variable refers to an object, the variable itself cannot
+// be reassigned, but the contents of the object can still be mutated.
+
 const nums = [1, 2, 3];
 
 const employee = {
@@ -54,37 +63,58 @@ const employee = {
 };
 
 // Reassignment is not allowed with variables declared with const.
+
+// These statements would try to make the variables refer to
+// completely different arrays or objects.
 // nums = [1, 2, 3];
 // employee = {};
 
-// The body of the if statement is different scope because it's
-// a new code block due to the curly braces.
-if (true) {
-    // Since this is a new block of code, the inner 'number' variable
-    // declared below hides the global 'number' variable.
-    const number = 40;
+// Mutation is different from reassignment.
 
-    // Logs 40 to the console because JavaScript always looks for
-    // variables starting from the most locally declared scope.
-    console.log("number:", number);
+// Mutation changes the contents of the existing object or array.
 
-    const message = "Hello";
+// The following adds 4 to the existing array.
+// nums.push(4);
 
-    console.log('message:', message, '\n');
-}
+// The following changes the value of an existing property
+// in the existing employee object.
+// employee.isSenior = true;
 
-// 'message' cannot be accessed here since variables declared
-// with const are block-scoped.
-// console.log('message:', message);
-
-// However, if a const variable refers to an object, the object's
-// properties can be mutated.
-
-// Mutation (4 is inserted at the end of the array)
 nums.push(4);
 
 employee.isSenior = true;
 
-console.log('nums:', nums, '\n');
+console.log("nums:", nums, "\n");
 
-console.log('employee:', employee);
+console.log("employee:", employee);
+
+
+// Block Scope
+
+// Variables declared with const have block scope.
+
+// The body of the if statement is a new block because it is surrounded
+// by curly braces.
+
+if (true) {
+    // This creates a new variable called 'number' inside this block.
+    // It is a different variable from the 'number' declared above.
+
+    const number = 40;
+
+    // JavaScript first looks for 'number' in the current block.
+    // Therefore, this prints 40 instead of the outer value 42.
+    console.log("number:", number);
+
+    // 'message' is declared inside the if block.
+    // Therefore, it can only be accessed inside this block.
+    const message = "Hello";
+
+    console.log("message:", message, "\n");
+}
+
+// The 'message' variable cannot be accessed here because it was
+// declared inside the if block and has block scope.
+
+// This would generate a ReferenceError.
+// console.log("message:", message);

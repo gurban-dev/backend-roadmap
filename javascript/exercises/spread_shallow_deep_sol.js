@@ -105,6 +105,8 @@ console.log("deepCopy.address.city:", deepCopy.address.city);
 // shallowCopy.address === user.address -> true
 // deepCopy.address === user.address -> false
 
+// address is simply the nested object in this case.
+
 // === is called the strict equality operator.
 console.log("\nSame address in shallow copy:",
             shallowCopy.address === user.address);
