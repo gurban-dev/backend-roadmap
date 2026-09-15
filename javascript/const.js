@@ -1,9 +1,21 @@
 // JavaScript or ECMAScript, introduced the const keyword in 2015.
 
-// The const declaration declares block-scoped local variables.
+// A declaration is the introduction of a variable, constant or
+// function.
 
 // Block-scoped means the variable can only be accessed within the
 // block of code where it was declared.
+
+// A block of code or code block always begins with an opening curly
+// brace { and ends with a closing curly brace }.
+// Anything written between these curly braces, belongs to that block.
+// {
+//     // This is the start of the block.
+
+//     let message = "Hello";
+
+//     // This is the end of the block.
+// }
 
 // Variables declared with const:
 // • cannot be redeclared
@@ -14,7 +26,13 @@
 const number = 42;
 
 // Redeclaration in the same scope is not allowed.
+
+// The following is considered redeclaration of the variable
+// 'number' because the const keyword preceded.
 // const number = 42;
+
+// Reassignment is not allowed:
+// number = 42;
 
 // A const variable must be initialised when it is declared.
 
@@ -24,6 +42,9 @@ const number = 42;
 // so a try...catch block in the same program cannot catch it.
 // const number;
 
+// An array in JavaScript falls under the category of an object.
+// If a variable declared with const refers to an object, the contents
+// of that object can still be mutated.
 const nums = [1, 2, 3];
 
 const employee = {
@@ -33,11 +54,20 @@ const employee = {
 };
 
 // Reassignment is not allowed with variables declared with const.
-// number = 42;
 // nums = [1, 2, 3];
 // employee = {};
 
+// The body of the if statement is different scope because it's
+// a new code block due to the curly braces.
 if (true) {
+    // Since this is a new block of code, the inner 'number' variable
+    // declared below hides the global 'number' variable.
+    const number = 40;
+
+    // Logs 40 to the console because JavaScript always looks for
+    // variables starting from the most locally declared scope.
+    console.log("number:", number);
+
     const message = "Hello";
 
     console.log('message:', message, '\n');

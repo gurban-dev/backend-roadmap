@@ -11,6 +11,9 @@
 // Data and behavior are represented as properties.
 // Each property has a key and a value.
 
+// By default, all JavaScript objects are mutable.
+// Meaning that you can modify their contents.
+
 const person = {
     name: "John",
     age: 30,

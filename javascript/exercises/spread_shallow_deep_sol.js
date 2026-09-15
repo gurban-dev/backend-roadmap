@@ -51,6 +51,8 @@ shallowCopy.age = 30;
 
 // age is a primitive value, so changing the copy's age
 // does not change the original object's age.
+
+// A primitive value is a value that is not an object.
 console.log("\nuser.age:", user.age);
 console.log("shallowCopy.age:", shallowCopy.age);
 
@@ -103,10 +105,11 @@ console.log("deepCopy.address.city:", deepCopy.address.city);
 // shallowCopy.address === user.address -> true
 // deepCopy.address === user.address -> false
 
-console.log("Same address in shallow copy:",
+// === is called the strict equality operator.
+console.log("\nSame address in shallow copy:",
             shallowCopy.address === user.address);
 
-console.log("\nSame address in deep copy:",
+console.log("Same address in deep copy:",
             deepCopy.address === user.address);
 
 // Expected output:
