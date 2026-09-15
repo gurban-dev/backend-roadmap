@@ -1,6 +1,7 @@
-// ============================================================
-// Part 2: const Reassignment.
-// ============================================================
+// Concepts:
+// const redeclaration, reassignment, initialization and block scope
+
+// Part 1: const Reassignment.
 
 // Predict what will happen when this program runs.
 
@@ -16,12 +17,10 @@ console.log(name);
 // Answer:
 // Is changing name from "Alice" to "Bob" reassignment
 // or redeclaration?
+
 // Why does JavaScript allow or reject it?
 
-
-// ============================================================
 // Part 3: const Redeclaration.
-// ============================================================
 
 // Predict what will happen here.
 
@@ -33,10 +32,7 @@ console.log(name);
 // or redeclaration?
 // What error do you expect?
 
-
-// ============================================================
 // Part 4: Initialization.
-// ============================================================
 
 // Predict the output.
 
@@ -53,10 +49,7 @@ console.log(city);
 // 2. What is happening when let city; is written?
 // 3. What is happening when city = "Toronto"; is written?
 
-
-// ============================================================
 // Part 5: Block Scope.
-// ============================================================
 
 let message = "Outside";
 
@@ -73,10 +66,7 @@ console.log(message);
 // 2. What will the second console.log() print?
 // 3. Why can both variables be called message?
 
-
-// ============================================================
 // Part 6: Global Scope.
-// ============================================================
 
 let username = "Alice";
 
@@ -87,16 +77,12 @@ if (true) {
 // Answer:
 // Why is username accessible inside the if block?
 
-
 // Now create your own example where username is declared
 // inside the if block.
 
 // Can you access username outside the block?
 
-
-// ============================================================
 // Part 7: Write Your Own Program.
-// ============================================================
 
 // Write a program that demonstrates all six concepts.
 
@@ -109,8 +95,6 @@ if (true) {
 // 5. Give message the value "Passed".
 // 6. Print message inside the block.
 // 7. Try to print message outside the block.
-// 8. Create two values that demonstrate the difference
-//    between == and ===.
 // 9. Create a const variable.
 // 10. Demonstrate what happens when you try to reassign it.
 // 11. Demonstrate what happens when you try to redeclare it.
@@ -118,10 +102,3 @@ if (true) {
 // Important:
 // Comment out any code that causes an error so that the
 // rest of your program can run.
-
-// Explain the difference between:
-// initialization
-// reassignment
-// redeclaration
-// block scope
-// global scope
