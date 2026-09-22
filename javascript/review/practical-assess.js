@@ -197,11 +197,10 @@ console.log(
 Create a function called addStudent.
 
 It should accept:
-
 1. The existing students array.
 2. A new student.
 
-It should return a NEW array containing all existing
+It should return a new array containing all existing
 students and the new student.
 
 Do not modify the original array.
@@ -234,7 +233,6 @@ console.log(students);
 Create a function called getPassingAdultNames.
 
 A passing student:
-
 1. Is at least 18 years old.
 2. Has an average grade of at least 70.
 
@@ -266,14 +264,12 @@ console.log(getPassingAdultNames(students));
 Create a function called processStudents.
 
 It should accept:
-
 1. An array of students.
 2. A callback function.
 
 The function should pass every student to the callback.
 
 For example:
-
 processStudents(students, function(student) {
     console.log(student.name);
 });
@@ -321,7 +317,6 @@ function fetchStudents() {
 Create an async function called displayStudents.
 
 It should:
-
 1. Call fetchStudents().
 2. Wait for the Promise.
 3. Print the names of all students.

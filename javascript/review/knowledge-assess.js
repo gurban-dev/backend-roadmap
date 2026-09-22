@@ -1,8 +1,8 @@
 /*
 JavaScript Knowledge Assessment.
 
-Keep in mind that the goal is not to memorize syntax.
-Explain your reasoning as you work through each question.
+Keep in mind that the goal is not to memorize syntax, but to
+explain your reasoning as you work through each question.
 */
 
 
@@ -10,7 +10,7 @@ Explain your reasoning as you work through each question.
 // Part 1: Predict the Output.
 // ============================================================
 
-console.log("\nQuestion 1");
+console.log("Question 1");
 
 let x = 10;
 
@@ -19,7 +19,6 @@ if (x > 5) {
 } else {
     console.log("B");
 }
-
 
 // What will this print?
 
@@ -38,6 +37,7 @@ while (number < 3) {
     number++;
 }
 
+console.log("\nnumber after the while loop:", number);
 
 // What will this print?
 
@@ -49,11 +49,23 @@ while (number < 3) {
 console.log("\nQuestion 3");
 
 for (let i = 0; i < 3; i++) {
-    console.log(i);
+    setTimeout(() => {
+        console.log(i);
+    }, 0);
 }
 
+for (var i = 0; i < 3; i++) {
+    setTimeout(() => {
+        console.log(i);
+    }, 0);
+}
 
-// What will this print?
+console.log(i);
+
+// Remember that let is block-scoped whereas var is function-scoped.
+
+// What does all of the code in this section print?
+// Explain why the two loops behave differently.
 
 
 // ============================================================
