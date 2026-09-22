@@ -37,6 +37,7 @@ let number = 0;
 
 while (number < 3) {
     console.log(number);
+
     number++;
 }
 
@@ -49,8 +50,8 @@ console.log(number);
 
 // number after the while loop: 3
 
-// The loop stops when number becomes 3 because
-// 3 < 3 is false.
+// None of the source code is executed in the while block when
+// number becomes 3 because 3 < 3 is false.
 
 
 // ============================================================
@@ -59,42 +60,71 @@ console.log(number);
 
 console.log("\nQuestion 3");
 
-{
-    for (let i = 0; i < 3; i++) {
-        setTimeout(() => {
-            console.log(i);
-        }, 0);
+function scopeTest() {
+    if (true) {
+
+        console.log(
+            "functionScoped before declaration:",
+            functionScoped,
+            "\n"
+        );
+
+        var functionScoped = "I am a var!";
+        let blockScoped = "I am a let!";
+
+        console.log(blockScoped);
     }
+
+    // functionScoped is accessible here because var is
+    // function-scoped rather than block-scoped.
+
+    console.log(functionScoped);
+
+    // blockScoped is not accessible here because let is
+    // block-scoped.
+
+    // console.log(blockScoped);
 }
 
-{
-    for (var i = 0; i < 3; i++) {
-        setTimeout(() => {
-            console.log(i);
-        }, 0);
-    }
+scopeTest();
 
-    console.log(i);
-}
+// Expected output:
+// functionScoped before declaration: undefined
 
-// Answer:
-// 3
-// 0
-// 1
-// 2
-// 3
-// 3
+// I am a let!
+// I am a var!
 
-// The first 3 comes from console.log(i) after the var loop.
+// Why can functionScoped be accessed outside the if block?
 
-// The let loop prints 0, 1, 2 because each iteration gets
-// its own block-scoped i.
+// var is function-scoped.
 
-// The var loop prints 3 three times because all callbacks
-// share the same var i. By the time they execute, the loop
-// has finished and i is 3.
+// Its scope is the entire scopeTest() function:
 
-// setTimeout(..., 0) still runs later, not immediately.
+// function scopeTest() {
+//     var functionScoped;
+//
+//     if (true) {
+//         functionScoped = "I am a var!";
+//     }
+//
+//     console.log(functionScoped);
+// }
+
+
+// Why can't blockScoped be accessed outside the if block?
+
+// let is block-scoped.
+
+// Its scope is limited to the braces:
+
+// if (true) {
+//     let blockScoped = "I am a let!";
+// }
+
+// Outside those braces, blockScoped does not exist.
+
+// Therefore this would cause a ReferenceError:
+// console.log(blockScoped);
 
 
 // ============================================================
@@ -114,9 +144,10 @@ console.log(0 === false);
 // true
 // false
 
-// == allows type coercion.
+// The loose equality operator (==) allows type coercion.
 
-// === compares both value and type.
+// The strict equality operator (===) compares both the value
+// and data type.
 
 // Prefer === in most JavaScript code because it avoids
 // unexpected type conversion.
@@ -137,6 +168,9 @@ user.name = "Jane";
 console.log(user.name);
 
 // Answer:
+// No, this would not cause an error.
+
+// Output:
 // Jane
 
 // const prevents reassignment of the variable:
@@ -156,6 +190,14 @@ console.log("\nQuestion 6");
 
 const numbers = [1, 2, 3, 4, 5];
 
+// filter() returns a new array containing only the items from the
+// original array that satisfy the condition.
+
+// In this case, because .map() is chained onto .filter(), map() iterates
+// over each element in the new array returned by filter() and multiplies
+// each element by 10.
+
+// 'result' is assigned the final array returned by map().
 const result = numbers
     .filter(number => number % 2 === 0)
     .map(number => number * 10);
@@ -187,7 +229,7 @@ console.log(total);
 // Answer:
 // 60
 
-// The 0 is the initial value of the accumulator.
+// The second argument, 0, is the initial value of the accumulator.
 
 // 0 + 10 + 20 + 30 = 60.
 
@@ -250,6 +292,8 @@ console.log(age);
 // const name = student.name;
 // const age = student.age;
 
+// Renaming the 'name' variable to 'universityStudent':
+// const { name: universityStudent, age } = student;
 
 // ============================================================
 // Question 10.
@@ -257,41 +301,61 @@ console.log(age);
 
 console.log("\nQuestion 10");
 
-const first = [1, 2, 3];
-const second = [...first, 4, 5];
+const zeroOne = [1, 2];
+const twoThree = [3, 4,];
+const fourFive = [4, 5];
 
-console.log(first);
-console.log(second);
+const zeroToFive = [...zeroOne, ...twoThree, ...fourFive];
 
-// Answer:
-// [1, 2, 3]
-// [1, 2, 3, 4, 5]
+console.log(zeroToFive);
 
-// The spread operator expands the elements of first
-// into the new array. It does not modify first.
+// Output:
+// [0, 1, 2, 3, 4, 5]
+
+// Here, the spread operator ... takes the individual elements
+// from each array and places them into a new array.
 
 
 // ============================================================
 // Question 11.
 // ============================================================
 
-function isEven(number) {
-    return number % 2 === 0;
+console.log("\nQuestion 11");
+
+const isEven = (num) => {
+    if (num % 2 === 0) {
+        return true;
+    }else {
+        return false;
+    }
+
+    // Also correct:
+    // return num % 2 === 0;
 }
 
 console.log(isEven(4));
 console.log(isEven(7));
 
-// Answer:
+// Output:
 // true
 // false
 
 // Even numbers have a remainder of 0 when divided by 2.
 
+const num = 10;
+
+const numIsEven = (num % 2 === 0) ? true : false;
+
+console.log("\nnumIsEven:", numIsEven)
+
+// Output:
+// numIsEven: true
 
 // ============================================================
 // Question 12.
 // ============================================================
+
+console.log("\nQuestion 12");
 
 function getAdults(people) {
     return people.filter(person => person.age >= 18);
@@ -311,13 +375,17 @@ console.log(getAdults(people));
 //     { name: "Charlie", age: 31 }
 // ]
 
-// filter() returns a new array containing elements for which
+// .filter() returns a new array containing elements for which
 // the callback returns true.
 
+///////////////////////////////////////////////////////////////
+// Continue from here.
 
 // ============================================================
 // Question 13.
 // ============================================================
+
+console.log("\nQuestion 13");
 
 // A callback is a function passed to another function.
 
@@ -343,6 +411,8 @@ console.log(callbackResult);
 // ============================================================
 // Question 14.
 // ============================================================
+
+console.log("\nQuestion 14");
 
 // The three Promise states are:
 // 1. pending

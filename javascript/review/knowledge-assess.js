@@ -48,25 +48,34 @@ console.log("\nnumber after the while loop:", number);
 
 console.log("\nQuestion 3");
 
-for (let i = 0; i < 3; i++) {
-    setTimeout(() => {
-        console.log(i);
-    }, 0);
+function scopeTest() {
+  if (true) {
+    // If functionScoped has not been declared yet, what do you
+    // think the following will log to the console?
+    console.log("functionScoped before declaration:", functionScoped, "\n");
+
+    var functionScoped = "I am a var!";
+    let blockScoped = "I am a let!";
+    
+    console.log(blockScoped);
+  }
+
+  // Checking accessibility outside the if-statement block.
+  console.log(functionScoped);
+
+  // console.log(blockScoped);
 }
 
-for (var i = 0; i < 3; i++) {
-    setTimeout(() => {
-        console.log(i);
-    }, 0);
-}
-
-console.log(i);
+scopeTest();
 
 // Remember that let is block-scoped whereas var is function-scoped.
 
-// What does all of the code in this section print?
-// Explain why the two loops behave differently.
+// var is legacy code because its scope is limited to the function
+// rather than the block and a variable with the same name can be
+// redeclared with var.
 
+// Why do you think logging blockScoped outside of the if block
+// cause an exception whereas logging functionScoped doesn't?
 
 // ============================================================
 // Question 4: Equality.
@@ -97,8 +106,8 @@ user.name = "Jane";
 
 console.log(user.name);
 
-
 // Does this cause an error?
+
 // Explain what const actually prevents.
 
 
@@ -108,14 +117,13 @@ console.log(user.name);
 
 console.log("\nQuestion 6");
 
-const numbers = [1, 2, 3, 4, 5];
+const nums = [1, 2, 3, 4, 5];
 
-const result = numbers
-    .filter(number => number % 2 === 0)
-    .map(number => number * 10);
+const result = nums
+    .filter(num => num % 2 === 0)
+    .map(num => num * 10);
 
 console.log(result);
-
 
 // What is the value of result?
 
@@ -129,15 +137,25 @@ console.log("\nQuestion 7");
 const prices = [10, 20, 30];
 
 const total = prices.reduce(
+    // reduce() processes each element in the array and
+    // combines them into one final result.
+
+    // The first argument is a callback function.
+    // Here, the callback is written as an arrow function.
+    
+    // A callback function is a function passed to another function
+    // so it can be called later.
+
+    // sum is the accumulated value.
+    // price is the current element in the array.
     (sum, price) => sum + price,
     0
 );
 
 console.log(total);
 
-
-// What is total?
-// What does the 0 represent?
+// What will 'total' be assigned?
+// What does the second argument, 0, represent?
 
 
 // ============================================================
@@ -154,7 +172,6 @@ const person = {
 
 console.log(person.name);
 console.log(person["age"]);
-
 
 // Explain the difference between the two property accesses.
 
@@ -175,9 +192,9 @@ const { name, age } = student;
 console.log(name);
 console.log(age);
 
-
 // Explain what happened here.
 
+// Show how would you rename 'name' to 'universityStudent'.
 
 // ============================================================
 // Question 10: Spread.
@@ -185,15 +202,15 @@ console.log(age);
 
 console.log("\nQuestion 10");
 
-const first = [1, 2, 3];
-const second = [...first, 4, 5];
+const zeroOne = [1, 2];
+const twoThree = [3, 4,];
+const fourFive = [4, 5];
 
-console.log(first);
-console.log(second);
+const zeroToFive = [...zeroOne, ...twoThree, ...fourFive];
 
+console.log(zeroToFive);
 
-// Explain what the spread operator did.
-
+// Explain what the spread operator did in this case.
 
 // ============================================================
 // Part 2: Functions.
@@ -201,16 +218,19 @@ console.log(second);
 
 // Question 11.
 
-// Write a function called `isEven` that accepts a number
+console.log("\nQuestion 11");
+
+// Write a function called isEven that accepts a number
 // and returns true if the number is even.
 // Otherwise, it should return false.
 
+// Show how you would write this with a ternary operator.
 
 // Write your solution below.
 
-
-// ============================================================
 // Question 12.
+
+console.log("\nQuestion 12");
 
 // Write a function called getAdults.
 
@@ -225,9 +245,7 @@ console.log(second);
 
 // Use filter().
 
-
 // Write your solution below.
-
 
 // ============================================================
 // Part 3: Callback Functions.
