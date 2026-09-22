@@ -23,7 +23,7 @@ console.log('5 == "5":', 5 == "5");
 // "5" is a String.
 
 // 5 and 5.0 have the same numeric value.
-// JavaScript converts "5" into the Number 5.
+// With the loose equality operator the string "5" is coerced into a number.
 
 // The comparison effectively becomes:
 // 5 == 5

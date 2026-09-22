@@ -1,25 +1,30 @@
 // Learning goal:
 // Understand that the spread operator can take the elements
 // of an array and place those elements into another array.
-const arr1 = [1, 2];
+const oneAndTwoArr = [1, 2];
 
 // Create a new array containing all of the numbers from
 // arr1 plus 3 and 4 without manually writing all of the
-// numbers that were in arr1.
+// numbers that were in oneAndTwoArr.
 
 // ... is the spread operator and it precedes the name of the
 // variable that references the array whose elements should be
 // spread into the new array. The spread operator cannot be
 // placed on the right side of the variable name:
-// const arr2 = [arr1..., 3, 4];
+// const arr2 = [oneAndTwoArr..., 3, 4];
 
 // The spread operator must be placed before the variable name:
-const arr2 = [...arr1, 3, 4];
+const arr2 = [...oneAndTwoArr, 3, 4];
 
-// Begin inserting arr1's elements starting from index one.
-const arr3 = [0, ...arr1, 3, 4];
+// Begin inserting oneAndTwoArr's elements starting from index one.
+const arr3 = [0, ...oneAndTwoArr, 3, 4];
 
-console.log("arr1:", arr1);
+const fiveAndSixArr = [5, 6];
+
+const arr4 = [0, ...oneAndTwoArr, 3, 4, ...fiveAndSixArr];
+
+console.log("oneAndTwoArr:", oneAndTwoArr);
+console.log("fiveAndSixArr:", fiveAndSixArr);
 console.log("arr2:", arr2);
 console.log("arr3:", arr3, "\n");
 
