@@ -352,21 +352,29 @@ console.log("D");
 
 // Question 19.
 
-// This function is supposed to return the sum of all
-// numbers greater than 10.
+console.log("\nQuestion 19");
+
+// This function is supposed to return the sum of all numbers
+// greater than 10.
 
 // Find and fix the bug.
+
+// What if the array doesn't have any numbers greater than 10?
+// Notice how the .reduce() method doesn't have a second argument
+// for the first parameter of the arrow function.
 
 function sumLargeNumbers(numbers) {
     return numbers.filter(number => number > 10)
         .reduce((sum, number) => sum + number);
 }
 
-console.log(sumLargeNumbers([5, 15, 20, 3]));
+console.log("sumLargeNumbers([5, 15, 20, 3]):", sumLargeNumbers([5, 15, 20, 3]));
 
+console.log("\nsumLargeNumbers([5, 6, 9, 3]):", sumLargeNumbers([5, 6, 9, 3]));
 
-// ============================================================
 // Question 20.
+
+console.log("\nQuestion 20");
 
 // This function is supposed to return the names of adults.
 
