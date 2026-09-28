@@ -1,0 +1,383 @@
+Please list the most common technical skills you see in the below job postsings:
+
+"## Job Description
+
+- Design and develop backend services and APIs using Python, ensuring scalability, performance, and reliability.
+- Architect and implement RESTful APIs that meet business requirements and technical specifications.
+- Develop and optimize database schemas, queries, and data models for both SQL and NoSQL databases.
+- Write clean, well-documented code following established coding standards and design patterns.
+- Conduct code reviews and collaborate with team members to maintain code quality and consistency.
+- Troubleshoot, debug, and resolve technical issues in production and development environments.
+- Participate in the full software development lifecycle, from requirements analysis to deployment and monitoring.
+- Implement automated testing strategies and maintain comprehensive test coverage.
+- Collaborate with product managers and stakeholders to understand requirements and translate them into technical solutions.
+- Continuously improve system performance, security, and maintainability through refactoring and optimization.
+
+## Qualifications
+
+- Degree in Computer Science or similar.
+- 3+ years of professional experience in backend development with Python,
+- Strong proficiency in Python and experience with backend frameworks such as Django, Flask, or FastAPI,
+- Solid understanding of RESTful API design principles and implementation,
+- Experience designing and working with relational databases (PostgreSQL, MySQL) and NoSQL databases (MongoDB, Redis),
+- Proficiency with version control systems, particularly Git.
+- Knowledge of cloud platforms such as AWS, Azure, or Google Cloud Platform.
+- Familiarity with Agile development methodologies.
+- Fluency in English (spoken and written)."
+"Job Description
+Who We Are
+
+At Halfspace, Part of Accenture - Center for Advanced AI - we believe that the smallest edge can make the biggest difference. We began in sports, predicting outcomes in live football matches, and today we bring that same precision and ambition into the world of business. We're here to unlock value through artificial intelligence and help organisations make better, more informed decisions, faster.
+
+With more than one hundred AI and data projects delivered, our work has transformed industries and earned international recognition. But awards and numbers tell only part of the story. What truly defines us is our people. Our team comes from leading institutions such as KU, DTU, Stanford, Oxford, Harvard, Caltech, Yale, Colombia and many more, blending expertise in physics, engineering, mathematics, statistics, operations research, computer science, chemistry, economics, biology, design and strategy. Together, we share curiosity, boldness, and a pioneering spirit.
+
+Halfspace is a specialized spearheading unit within Accenture, focused on bringing the deepest expertise in applied AI. We are 'Inch Wide - Mile Deep' in our capabilities.
+
+What you'll be doing
+
+As part of the Engineering team at Halfspace, you’ll help build the data and AI platforms that power the next generation of applied intelligence. You’ll design, develop, and deploy robust systems that enable our scientists, researchers, and clients to transform data into insight — and insight into action.
+
+You’ll work on complex, high-impact projects across industries, collaborating closely with experts in machine learning, data science, and strategy. From designing scalable data architectures and optimizing model pipelines, to integrating cutting-edge AI into enterprise environments, you’ll be at the core of turning ideas into reality.
+
+Every line of code, every system you shape, will contribute to our mission: delivering the smallest edge that makes the biggest difference.
+
+
+Qualification
+Who we're looking for
+
+We’re looking for engineers who combine deep technical ability with intellectual curiosity and a drive to push boundaries. You thrive in solving complex problems and take pride in building elegant, high-performance systems.
+
+You may come from a background in software engineering, data engineering, MLOps, or platform architecture — but above all, you have a passion for applying technology to create meaningful impact.
+
+We value:
+
+Strong proficiency in one or more of Python, Java, C++, or similar languages
+
+Experience with modern data and AI infrastructure (e.g., cloud platforms, distributed systems, CI/CD, containerization)
+
+A solid understanding of software design principles, scalability, and performance optimization
+
+A collaborative mindset and ability to work across disciplines
+
+Curiosity, precision, and a pioneering spirit — the qualities that define Halfspace"
+"In pursuit of this objective, we acquire and improve digital businesses, not to sell on, but to own and operate for the long term. The transformations we make are often deep—designed to speed up innovation, benefit customers, and strengthen business performance. Here, hierarchy is minimal and teams are small and talent-dense. We operate established products with the ambition, agility, and urgency of a startup. Across the company, we integrate AI deeply into how we work so that human judgment and machine intelligence reinforce each other.
+
+For a talented, driven, and collaborative individual, working at Bending Spoons is an opportunity to learn, make an impact, and progress their career at an exceptionally high rate. That’s our promise to such a candidate.
+
+A few examples of your responsibilities
+Build software that matters. Take real ownership from idea to production, creating systems used by millions and evolving them into products at scale.
+Amplify your impact with AI. Integrate the most powerful AI tools directly into your development workflow—design, implementation, testing, and documentation—to move faster while maintaining high standards for correctness, reliability, and maintainability.
+Master your toolkit. Work across diverse stacks with end-to-end ownership, choosing the right technologies for each challenge. From monoliths to microservices, gRPC to REST, Kubernetes to Docker, Python to Rust—you’ll apply technologies thoughtfully, focusing on depth and purpose rather than trends.
+Simplify relentlessly. Question every layer of complexity. Improve architectures, pipelines, and codebases to build systems that are simpler, more scalable, and easier to maintain."
+"## Description
+
+We are seeking an experienced Full Stack Developer to join a specialist technology team building and maintaining proprietary software platforms across the treasury, collateral, and trade operations space within a leading funds environment. You will play a key role in delivering new functionality, driving enhancements, and supporting mission-critical systems within a Middle Office environment.
+
+
+
+**Responsibilities:**
+
+- Develop new applications that serve and extend existing software systems
+- Further develop and enhance current platform capabilities across multiple modules and architectures
+- Contribute to the automated build process in line with development best practices
+- Design, build, and deploy AI agents and agentic workflows to enhance platform capabilities
+- Investigate emerging technologies and present findings for architectural review
+- Design and conduct testing across new and existing functionality
+- Maintain systems documentation and knowledgebase content to support operational efficiency
+- Develop documentation and assistance tools to support end users
+- Contribute to system releases and provide third-level support as required
+- Identify and explore opportunities to add value through continuous improvement
+
+## Requirements
+
+- 2+ years of Python development experience (FastAPI, PostgreSQL)
+- TypeScript and React 18 frontend development
+- AWS Cloud Platform, including hands-on experience with AWS Bedrock
+- Agentic AI development — designing and deploying autonomous or semi-autonomous agents
+- Familiarity with agentic frameworks such as LangChain, Strands, or equivalent
+- Proficient with APIs, service-oriented architectures, and test-driven development
+- BS in Computer Science, Computer Engineering, or equivalent experience
+
+**Desirable**
+
+- AWS AgentCore; advanced Generative AI / Agentic AI experience
+- Event-driven application architecture
+- Financial industry experience
+- AG Grid, AG Charts, Rsbuild, Module Federation, Pydantic, JWT, Docker"
+"As a Backend Developer at PwC, you'll build and improve innovative digital products used by colleagues and clients, such as data-heavy applications and AI/agentic solutions. You'll deliver features end-to-end, from translating designs and user stories into working software, to testing, deployment support and continuous improvement. You'll join a self-steering agile team with backend, frontend, design and product ownership, where you can take ownership of software that matters. 
+
+ 
+
+**What will you be doing?** 
+
+You'll become part of an agile,team, working hybrid from our offices in Amsterdam and/or Utrecht. The team collaborates with various tech teams in the different Lines of Service. Together with your team, you're responsible for creating new solutions from ideation to production with a strong focus on (Agentic) AI. This means you're involved in developing new features, integrating systems, and scaling and improving solutions, all with the aim of quickly delivering innovative digital products without compromising on quality. 
+
+
+Your work will include: 
+
+- Developing backend functionality for innovation products, primarily with Python (Django and/or FastAPI). 
+
+* Translating designs and user stories into working software. 
+
+- Delivering features end-to-end, including testing and deployment support. 
+
+* Building and maintaining components, APIs, integrations and backend services. 
+
+- Integrating frontend components with backend APIs and data services. 
+
+* Writing clean, secure, maintainable and scalable code. 
+
+- Writing unit tests and supporting integration/regression testing. 
+
+* Performing peer reviews and contributing to overall code quality. 
+
+- Supporting troubleshooting, bug fixing and performance improvements. 
+
+* Identifying technical risks, dependencies and improvement opportunities. 
+
+- Contributing to CI/CD, DevOps practices and Agile/Scrum events. 
+
+* Documenting technical decisions and implementation details; 
+
+ 
+
+You'll work closely with the Product Owner, Business Analyst/Designer, Tester and Tech Lead. Some projects you might be prototyping a brand-new idea from scratch, or you could be further developing existing products or exploring how agentic AI can solve a real business problem or need.  
+
+ 
+
+**Does this describe you?** 
+
+To have a differentiating impact you'll be user-centric and critical in your thinking and approach. You enjoy solving technical challenges, collaborating with others and taking ownership of your work, and you know how to work effectively in cross-functional, agile teams. You are not uncomfortable with ambiguity, are flexible to changing priorities and have a curious, experimental mindset.  
+
+ 
+
+**What you bring (must-haves):** 
+
+- Minimum of 3 years of software development experience 
+
+* Bachelor's level of working and thinking in a relevant field 
+
+- Strong knowledge of Python, with solid experience in Django and/or FastAPI. 
+
+* Solid understanding of backend development, Good understanding of REST APIs, databases (SQL) 
+
+- Experience with AI, LLMs, or agentic solutions. 
+
+* Experience with unit and integration testing 
+
+- Familiarity with Git, pull requests and code reviews 
+
+* Experience with Docker and containerized environments 
+
+- Experience mentoring or advising peers on development practices 
+
+* Experience working in Agile/Scrum (and/or SAFe) environments 
+
+- Knowledge of security best practices and development standards 
+
+* Ability to independently deliver features based on functional designs 
+
+- Good analytical, communication and collaboration skills 
+
+* A proactive mindset and comfort working with changing requirements 
+
+ 
+
+**Nice to have:** 
+
+- Experience with vector databases. 
+
+* Experience with CI/CD pipelines and DevOps practices. 
+
+- Experience with Azure (AKS, Azure DevOps) or similar cloud environments. 
+
+* Familiarity with frontend frameworks (React or similar frameworks) 
+
+- Experience or additional knowledge related to Data Science or Data Architecture "
+"🚀 Backend API Developer | Sports Trading
+
+📍 Lisbon (Hybrid) | Full-time
+
+
+
+Love building high-performance backend systems where milliseconds matter?
+
+
+
+We're hiring a Backend API Developer to help power a cutting-edge sports trading platform. You'll work on scalable API infrastructure, optimize databases, maintain data pipelines, and help build distributed systems that process real-time sports data with speed and reliability.
+
+
+
+What you'll be working with:
+
+⚡ Python (essential)
+
+🗄️ PostgreSQL
+
+🔗 APIs
+
+🌐 Scraping infrastructure
+
+🛠️ Git, Node.js, React & Supabase (nice to have)
+
+
+
+We're looking for someone who:
+
+✔️ Ships, not just talks
+
+✔️ Thrives in fast-paced environments
+
+✔️ Takes ownership and works autonomously
+
+✔️ Loves solving complex backend and distributed systems challenges
+
+✔️ Has a Computer Science, Engineering, Data Science (or related) background
+
+✔️ Has an interest in sports (a bonus, not a requirement)
+
+
+
+Join a small, ambitious engineering team building the infrastructure behind one of the fastest-moving industries in tech.
+
+
+
+📩 Interested? Send me a message or apply today.
+
+
+Requirements added by the job poster
+
+• Bachelor's Degree
+
+• 1+ years of work experience with API Development
+
+• 2+ years of work experience with Python (Programming Language)"
+"Junior Python Developer – Front Office Trading
+
+Elevate Partners is partnering with a leading international financial services organisation seeking a Junior Python Developer to join its front-office technology team in Dublin.
+
+This is an excellent opportunity for someone with a genuine interest in trading and financial markets who wants to develop their career while sitting directly alongside experienced traders.
+
+You will learn how a trading desk operates while building Python-based tools, analytics and automation that support the team’s daily decision-making and workflows.
+
+
+
+The role will involve:
+
+
+
+• Working directly with traders and front-office stakeholders
+
+• Developing trading tools and workflow applications using Python
+
+• Automating repetitive desk processes
+
+• Working with market, portfolio and risk data
+
+• Supporting and improving applications used by the trading desk
+
+• Exploring AI-enabled tools and new approaches to automation
+
+
+
+We are looking for someone with:
+
+
+
+• Commercial or project-based Python coding experience
+
+• A genuine interest in trading and financial markets
+
+• Strong problem-solving and analytical ability
+
+• A willingness to expand their coding and software-development skills
+
+• Good communication skills and confidence working with business users
+
+• Exposure to SQL, data engineering, React, JavaScript or cloud technology would be beneficial
+
+
+
+The organisation is particularly interested in someone technically capable, curious and motivated to learn directly from the traders around them.
+
+
+
+ Dublin
+
+ Permanent
+
+ Hybrid working
+
+
+
+If you are interested in building a career at the intersection of technology and trading, please contact me directly or send your CV to doconnell@elevatepartners.ie."
+"We are looking for Software Engineers to join a dedicated engineering squad supporting a major Real-Time Engineering initiative.
+
+Location: Bucharest or Cluj, Romania
+
+Work Model: Hybrid – site presence as required
+
+What You’ll Do
+
+Develop, refactor and integrate software solutions from build through release.
+Write clean, secure and well-tested code.
+Work with CI/CD, Git, unit testing and DevSecOps pipelines.
+Develop and integrate APIs and existing systems.
+Work with Docker/Kubernetes or similar container technologies.
+Participate in code reviews, testing and continuous improvement.
+Collaborate with engineering SMEs and product teams.
+
+
+What We’re Looking For
+
+4+ years of commercial software engineering experience
+Strong proficiency in 2+ of: C++, C#, Java, Python
+Experience with SQL and scripting
+Strong knowledge of Git, CI/CD and unit testing
+Experience with API integration
+Understanding of secure coding, dependency scanning and SBOM concepts
+Experience with Docker/Kubernetes or equivalent"
+"We are looking for a motivated Python Developer to come join our team of professionals!
+
+If you are passionate about technology, constantly seeking to learn and improve skillset, then you are the type of person we are looking for!
+
+You will have the opportunity to work in all stages of our software process from researching data sources to developing data pipelines, building business intelligence visualization tools, creating APIs that interface with external systems, and writing tests to ensure software and data stability.
+
+About Kaderabotim:
+
+Kaderabotim is a one-stop-shop platform that hosts information about the working environment, information provided by people who interact or have interacted professionally with companies. The platform also hosts information of public interest in different fields such as human resources, job market, payroll, etc., information structured both in the form of articles and in the form of forum discussions.
+
+The Kaderabotim platform is present in 14 countries: Romania, Hungary, the Czech Republic, Greece, the Republic of Moldova, Ukraine, Poland, Bulgaria and MENA.
+
+Your responsibilities:
+
+Design and build APIs that interface with external systems
+Design and build data pipelines
+Support deployment of data science models in production
+Support business intelligence and data science needs via visualization, reporting and debugging
+Encourage a culture of rigorous documentation and software testing
+
+Your profile:
+
+Strong knowledge of Python frameworks (FastAPI, Flask, Falcon, etc)
+BS degree in Computer Science or related field, or equivalent work experience; 3-5 years professional experience
+Experience with SQL and/or NoSQL databases (PostgreSQL, Oracle, MongoDB, Redis etc.)
+Ability to write clean, testable, and well-documented code
+Deep understanding of API development and integration
+Knowledge of source control tools, especially GIT
+Familiarity with basic statistical concepts a plus
+Strong attention to detail
+Highly self-motivated and results-oriented team player; candidates with previous remote work experience preferred"
+"About the job
+Must-Have Skills
+
+Strong Python development experience.
+Hands-on experience in Machine Learning and NLP.
+Experience with FastAPI / Flask / Django.
+Strong understanding of REST APIs and microservices.
+Experience with React / Angular / JavaScript / TypeScript.
+Experience with PyTorch / TensorFlow / Scikit-learn.
+NLP libraries/frameworks such as Hugging Face, Transformers, spaCy, NLTK.
+Strong SQL and database knowledge.
+Experience with Git, Docker, CI/CD.
+Good understanding of cloud platforms and production deployment."
