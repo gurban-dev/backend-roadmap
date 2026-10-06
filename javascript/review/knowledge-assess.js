@@ -340,11 +340,12 @@ console.log("D");
 
 // Question 18.
 
+console.log("\nQuestion 18");
+
 // Explain one difference between procedural programming
 // and object-oriented programming.
 
 // Give a simple example of each.
-
 
 // ============================================================
 // Part 8: Debugging.
@@ -364,13 +365,11 @@ console.log("\nQuestion 19");
 // for the first parameter of the arrow function.
 
 function sumLargeNumbers(numbers) {
+    // No initialValue provided: 'sum' defaults to the first
+    // element of the filtered array.
     return numbers.filter(number => number > 10)
         .reduce((sum, number) => sum + number);
 }
-
-console.log("sumLargeNumbers([5, 15, 20, 3]):", sumLargeNumbers([5, 15, 20, 3]));
-
-console.log("\nsumLargeNumbers([5, 6, 9, 3]):", sumLargeNumbers([5, 6, 9, 3]));
 
 // Question 20.
 

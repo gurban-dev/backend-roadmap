@@ -509,62 +509,125 @@ dog.speak();
 // Question 18.
 // ============================================================
 
-// Procedural programming generally organizes code around
-// functions and sequences of operations.
+console.log("\nQuestion 18");
 
+// Explain one difference between procedural programming
+// and object-oriented programming.
+
+// Give a simple example of each.
+
+// Procedural programming organises code around functions and
+// sequences of operations.
+
+// Object-oriented programming organises code around objects
+// that combine data and behavior.
+
+// Suppose you wanted to calculate the area of a rectangle.
+
+// Procedural programming approach:
 function calculateArea(width, height) {
-    return width * height;
+    // Inside of a function, both let and const become locally
+    // scoped to the function or any block {} within it.
+
+    // Since 'area' was declared inside this function, it cannot
+    // because accessed outside of the function.
+
+    // const is the default since it prevents new data from being
+    // assigned to an existing variable.
+    const area = width * height;
+
+    // return width * height;
+
+    // The following is preferred since 'area' is more understandable
+    // than width * height.
+    return area;
 }
 
-console.log(calculateArea(10, 5));
+console.log("calculateArea(10, 5):", calculateArea(10, 5));
 
+// Object-oriented programming approach:
 
-// Object-oriented programming organizes code around objects
-// that combine data and behavior.
+// What data an instance of this Rectangle class should store?
+// width
+// height
+
+// What behavior should this class define?
 
 class Rectangle {
     constructor(width, height) {
+        // Defining the data that an object of this class will
+        // store.
+
+        // The 'this' keyword indicates that the attribute belongs
+        // to an instance of this class:
         this.width = width;
         this.height = height;
     }
 
+    // In Python:
+    // def __init__(self, width, height):
+    //     self.width = width
+    //     self.height = height
+
     calculateArea() {
-        return this.width * this.height;
+        const area = this.width * this.height;
+
+        return area;
     }
 }
 
-const rectangle = new Rectangle(10, 5);
+// Create an instance of the Rectangle class.
 
-console.log(rectangle.calculateArea());
+// This invokes the constructor method declared in the Rectangle
+// class.
+const rectangle1 = new Rectangle(10, 5);
+const rectangle2 = new Rectangle(8, 4);
 
+// Calling the calculateArea() method on the Rectangle object.
+console.log("\nrectangle1.calculateArea():", rectangle1.calculateArea());
 
-// The important difference is how the program's data and
-// behavior are organized.
-
+// When you call calculateArea() on an instance, it automatically has
+// full access to that specific obect's attributes and their current
+// values.
+console.log("\nrectangle2.calculateArea():", rectangle2.calculateArea());
 
 // ============================================================
 // Question 19.
 // ============================================================
 
+console.log("\nQuestion 19");
+
+// This function is supposed to return the sum of all numbers
+// greater than 10.
+
+// Find and fix the bug.
+
+// What if the array doesn't have any numbers greater than 10?
+// Notice how the .reduce() method doesn't have a second argument
+// for the first parameter of the arrow function.
+
 function sumLargeNumbers(numbers) {
-    return numbers
-        .filter(number => number > 10)
-        .reduce((sum, number) => sum + number, 0);
+    // sum is initialised with 0.
+    return numbers.filter(number => number > 10)
+        .reduce((sum, number) => sum + number);
 }
 
-console.log(sumLargeNumbers([5, 15, 20, 3]));
+console.log("[5, 15, 20, 3].filter(number => number > 10):\n",
+            [5, 15, 20, 3].filter(number => number > 10));
 
-// Answer:
-// 35
+console.log("\n[5, 6, 9, 3].filter(number => number > 10):\n",
+            [5, 6, 9, 3].filter(number => number > 10));
 
-// filter() produces:
-// [15, 20]
+console.log("\nsumLargeNumbers([5, 15, 20, 3]):", sumLargeNumbers([5, 15, 20, 3]));
 
-// reduce() then calculates:
-// 0 + 15 + 20 = 35
+console.log("\nsumLargeNumbers([5, 6, 9, 3]):", sumLargeNumbers([5, 6, 9, 3]));
 
-// The initial 0 also makes the function safe when the
-// filtered array is empty.
+// What occurs when [5, 6, 9, 3] is passed as an argument
+// to sumLargeNumbers():
+// [].reduce((sum, number) => sum + number);
+
+// The .reduce() method is called on an empty array which
+// produces a TypeError.
 
 
 // ============================================================
