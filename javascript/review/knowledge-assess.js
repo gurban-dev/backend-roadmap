@@ -361,6 +361,7 @@ console.log("\nQuestion 19");
 // Find and fix the bug.
 
 // What if the array doesn't have any numbers greater than 10?
+
 // Notice how the .reduce() method doesn't have a second argument
 // for the first parameter of the arrow function.
 
@@ -377,7 +378,7 @@ console.log("\nQuestion 20");
 
 // This function is supposed to return the names of adults.
 
-// Find and fix the bug.
+// Is there a bug in the following program?
 
 function getAdultNames(people) {
     return people

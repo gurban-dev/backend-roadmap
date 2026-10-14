@@ -2,6 +2,9 @@
 // Understand how the reduce() method processes each element of
 // an array by using an accumulator to compute a single result.
 
+// Use the .reduce() method when you need to combine an entire
+// collection of data into a single result.
+
 // In JavaScript, all of these values are simply of the data type number.
 const prices = [10.0, 20.0, 30.0, 40];
 
@@ -70,3 +73,41 @@ Iteration 4
 */
 
 console.log(`total: ${total}`);
+
+const words = ["It", "is", "a", "beautiful", "day", "."];
+
+// The second argument, an "" (empty string), is assigned to
+// the 'accumulator' parameter.
+const sentence = words.reduce((accumulator, currentItem) => {
+    // return is how the progress of the reduce() method is
+    // saved and passed to the next iteration.
+
+    // 1st iteration:
+    // accumulator is ""
+    // return "It"
+
+    // 2nd iteration:
+    // accumulator is "It"
+    // return "It" + " " + "is"
+
+    // The return keyword sends the following to the next
+    // iteration of the .reduce() method:
+    // "It is"
+
+    // Last iteration:
+    // return "It is a beautiful day" + "."
+
+    // If 'accumulator' is currently empty, just return
+    // 'currentItem'. Otherwise, add a space.
+    if (accumulator === "") {
+        return currentItem;
+    }
+
+    if (currentItem === ".") {
+        return accumulator + currentItem;
+    }
+
+    return accumulator + " " + currentItem;
+}, "");
+
+console.log("\nsentence:", sentence);

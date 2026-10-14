@@ -653,9 +653,13 @@ console.log(
 
 // The code is already correct.
 
-// filter() removes Bob because he is under 18.
+// Unlike .reduce(), .map() does not need a starting point
+// for the first parameter of the arrow function that it
+// accepts. This first parameter is called the accumulator.
 
-// map() then extracts the names of the remaining people.
+// .filter() removes Bob because he is under 18.
+
+// .map() then extracts the names of the remaining people.
 
 // An important debugging lesson:
 // Do not change code simply because a question says there

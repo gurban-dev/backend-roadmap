@@ -4,6 +4,11 @@ const numbers = [2, 4, 6, 8, 10];
 
 // It creates a new array by calling a function on every
 // element in the original array.
+
+// Use the .map() method if your goal is to transform an
+// entire collection into a new collection of the exact
+// same size.
+
 const doubledNumbers = numbers.map((number) => {
     return number * 2;
 });
